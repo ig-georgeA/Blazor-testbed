@@ -1,0 +1,58 @@
+.pickers-combo-container {
+    justify-content: center;
+    height: 100%;
+    align-items: center;
+}
+.group {
+    flex-wrap: wrap;
+    align-items: center;
+    position: relative;
+    min-width: 50px;
+}
+.group_1 {
+    position: relative;
+    align-items: stretch;
+    min-height: 50px;
+    min-width: 50px;
+}
+.group_2 {
+    padding: 16px;
+    width: 500px;
+    align-items: stretch;
+    min-height: 50px;
+    min-width: 50px;
+}
+.dropdown {
+    width: 188px;
+    flex-shrink: 0;
+    min-width: min-content;
+}
+.button {
+    flex-shrink: 0;
+    margin: 16px;
+    height: max-content;
+    min-width: min-content;
+}
+.user-input {
+    margin: 16px;
+    height: max-content;
+    min-width: min-content;
+}
+.icon {
+    color: hsla(var(--igc-warn-500));
+    width: 24px;
+    height: 24px;
+    font-size: 24px;
+}
+.icon_1 {
+    width: 24px;
+    height: 24px;
+    font-size: 24px;
+}
+.row-layout {
+    display: flex;
+}
+.column-layout {
+    display: flex;
+    flex-direction: column;
+}

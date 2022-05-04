@@ -1,0 +1,40 @@
+@page "/copy-paste"
+@inject NavigationManager NavigationManager
+@inject HttpClient HttpClient
+
+<div class="copy-paste-container row-layout">
+    <div class="column-layout-1 column-layout">
+        <h5 class="h5">
+            Select all components shown here, and use keyboard shortcut to copy paste.
+        </h5>
+        <IgbInput Label="Label/Placeholder" Outlined="true" class="user-input" copy-paste-scope></IgbInput>
+        <IgbInput Label="Label/Placeholder" Outlined="true" class="user-input" copy-paste-scope></IgbInput>
+        <IgbInput Label="Label/Placeholder" Outlined="true" class="user-input" copy-paste-scope>
+            <span slot="prefix">
+                <span class="material-icons icon-1">
+                    person
+                </span>
+            </span>
+        </IgbInput>
+        <IgbButton class="user-input" copy-paste-scope>
+            <span class="material-icons">
+                add
+            </span>
+            <span>Button</span>
+            <IgbRipple></IgbRipple>
+        </IgbButton>
+        <IgbButton class="user-input" copy-paste-scope>
+            Button
+            <IgbRipple></IgbRipple>
+        </IgbButton>
+        <span class="tabs">Tabs not yet available in Blazor</span>
+    </div>
+    <div class="column-layout-1_1 column-layout">
+        <h5 class="h5">
+            Paste here using context menu and keyboard shortcut
+        </h5>
+    </div>
+</div>
+
+@code {
+}

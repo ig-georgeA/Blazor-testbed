@@ -1,0 +1,78 @@
+.dialogs-and-overlays-container {
+    height: 100%;
+    align-items: stretch;
+}
+.image {
+    height: 200px;
+    min-width: 0;
+    min-height: 0;
+    width: 443px;
+    object-fit: cover;
+}
+.group {
+    background-color: hsla(var(--igc-gray-200));
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    min-width: 50px;
+    min-height: 50px;
+    flex-grow: 1;
+    flex-basis: 0;
+}
+.group_1 {
+    align-items: stretch;
+    position: relative;
+    min-width: 50px;
+    min-height: 50px;
+    flex-grow: 1;
+    flex-basis: 0;
+}
+.group_2 {
+    align-items: center;
+    justify-content: center;
+    min-width: 50px;
+    min-height: 50px;
+    flex-grow: 1;
+    flex-basis: 0;
+}
+.button {
+    margin: 0 8px 0 0;
+    height: max-content;
+    min-width: min-content;
+}
+.button_1 {
+    flex-shrink: 0;
+    height: max-content;
+    min-width: min-content;
+}
+.button_2 {
+    height: max-content;
+    min-width: min-content;
+}
+.snackbar {
+    position: fixed;
+    z-index: 1;
+    min-width: min-content;
+    height: max-content;
+}
+.banner {
+    flex-shrink: 0;
+    min-width: min-content;
+    height: max-content;
+}
+.dialog {
+    min-width: 0;
+    min-height: 0;
+}
+.icon {
+    width: 24px;
+    height: 24px;
+    font-size: 24px;
+}
+.row-layout {
+    display: flex;
+}
+.column-layout {
+    display: flex;
+    flex-direction: column;
+}

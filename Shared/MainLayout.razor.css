@@ -1,0 +1,55 @@
+.main-navigation-container {
+    height: 100%;
+    align-items: stretch;
+}
+.group {
+    overflow: auto;
+    min-width: 50px;
+    min-height: 50px;
+    flex-basis: 0;
+    align-items: stretch;
+    flex-grow: 1;
+}
+.view-container {
+    position: relative;
+    flex-grow: 1;
+    min-width: 0;
+    min-height: 0;
+}
+.nav-drawer-item {
+    min-width: 0;
+    min-height: 0;
+}
+.navbar {
+    top: 0;
+    left: 0;
+    position: sticky;
+    height: max-content;
+    z-index: 1;
+    min-width: min-content;
+}
+.nav-drawer {
+    flex-shrink: 0;
+    width: 320px;
+    min-width: min-content;
+    min-height: 0;
+}
+.nav-drawer-item_1 {
+    min-width: 0;
+    min-height: 0;
+}
+.button::part(base) {
+    color: hsla(var(--igc-gray-900));
+}
+.icon {
+    width: 24px;
+    height: 24px;
+    font-size: 24px;
+}
+.row-layout {
+    display: flex;
+}
+.column-layout {
+    display: flex;
+    flex-direction: column;
+}

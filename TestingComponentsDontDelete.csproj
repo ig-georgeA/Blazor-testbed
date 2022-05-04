@@ -1,0 +1,32 @@
+<Project Sdk="Microsoft.NET.Sdk.BlazorWebAssembly">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="IgniteUI.Blazor" Version="21.2.73" />
+    <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly" Version="6.0.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.DevServer" Version="6.0.0" PrivateAssets="all" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="Shared/MainLayout.razor.css" CssScope="main-navigation-scope" />
+    <None Update="Pages/Layouts.razor.css" CssScope="layouts-scope" />
+    <None Update="Pages/Position.razor.css" CssScope="position-scope" />
+    <None Update="Pages/TabLayout.razor.css" CssScope="tab-layout-scope" />
+    <None Update="Pages/CardCalendar.razor.css" CssScope="card-calendar-scope" />
+    <None Update="Pages/ListsData.razor.css" CssScope="lists-data-scope" />
+    <None Update="Pages/DataGridLayouts.razor.css" CssScope="data-grid-layouts-scope" />
+    <None Update="Pages/TypeScale.razor.css" CssScope="type-scale-scope" />
+    <None Update="Pages/Inputs.razor.css" CssScope="inputs-scope" />
+    <None Update="Pages/PickersCombo.razor.css" CssScope="pickers-combo-scope" />
+    <None Update="Pages/DialogsAndOverlays.razor.css" CssScope="dialogs-and-overlays-scope" />
+    <None Update="Pages/SignInPage.razor.css" CssScope="sign-in-page-scope" />
+    <None Update="Pages/Image.razor.css" CssScope="image-scope" />
+    <None Update="Pages/CopyPaste.razor.css" CssScope="copy-paste-scope" />
+  </ItemGroup>
+
+</Project>
