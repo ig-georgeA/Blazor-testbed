@@ -26,12 +26,22 @@ img, video {
     max-width: 100%;
 }
 
+/* align icons in their containers */
+.material-icons, igc-button {
+    vertical-align: middle;
+}
+
 igc-badge .material-icons {
     font-size: 1rem;
     /* let text overflow without enlarging the badge */
     width: 0;
     display: inline-flex;
     justify-content: center;
+}
+
+/* temp adjust color of icon buttons */
+.icon-button::part(base) {
+    color: hsla(var(--igc-gray-800));
 }
 
 h1:focus {
