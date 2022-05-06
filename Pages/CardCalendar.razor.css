@@ -95,6 +95,11 @@
     height: max-content;
     flex-shrink: 0;
 }
+.button-group {
+    min-width: min-content;
+    flex-shrink: 0;
+    height: max-content;
+}
 .button {
     width: max-content;
     height: max-content;
