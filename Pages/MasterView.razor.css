@@ -1,0 +1,39 @@
+.master-view-container {
+    height: 100%;
+    align-items: stretch;
+}
+.group {
+    overflow: auto;
+    position: relative;
+    min-width: 50px;
+    min-height: 50px;
+    align-items: stretch;
+}
+.list {
+    flex-grow: 1;
+    flex-basis: 0;
+    margin: 16px;
+    height: max-content;
+    min-width: max-content;
+}
+.list_1 {
+    margin: 16px;
+    height: max-content;
+    min-width: max-content;
+}
+.list-item {
+    min-width: 0;
+    min-height: 0;
+}
+.icon {
+    width: 24px;
+    height: 24px;
+    font-size: 24px;
+}
+.row-layout {
+    display: flex;
+}
+.column-layout {
+    display: flex;
+    flex-direction: column;
+}

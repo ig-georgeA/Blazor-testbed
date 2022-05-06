@@ -1,5 +1,5 @@
-//namespace TestingComponentsDontDelete.Data.Northwind; // Razor won't recognize third level namespace
-namespace TestingComponentsDontDelete.Northwind;
+//namespace ListInsideRowVsColLayout.Data.Northwind; // Razor won't recognize third level namespace
+namespace ListInsideRowVsColLayout.Northwind;
 
 public class EmployeesType
 {
