@@ -1,0 +1,52 @@
+@page "/"
+@inject HttpClient HttpClient
+
+<div class="master-view-container row-layout">
+    <div class="group row-layout">
+        <IgbList class="list" master-view-scope>
+            @foreach (var item in northwindEmployees)
+            {
+                <IgbListItem class="list-item" master-view-scope>
+                    <div slot="start">
+                        <IgbAvatar Src="@item.AvatarUrl" Size="SizableComponentSize.Medium"></IgbAvatar>
+                    </div>
+                    <div slot="title">@item.LastName</div>
+                    <div slot="subtitle">@item.Title</div>
+                    <div slot="end">
+                        <span class="material-icons icon">
+                            star
+                        </span>
+                    </div>
+                </IgbListItem>
+            }
+        </IgbList>
+    </div>
+    <div class="group column-layout">
+        <IgbList class="list_1" master-view-scope>
+            @foreach (var item in northwindEmployees)
+            {
+                <IgbListItem class="list-item" master-view-scope>
+                    <div slot="start">
+                        <IgbAvatar Src="@item.AvatarUrl" Size="SizableComponentSize.Medium"></IgbAvatar>
+                    </div>
+                    <div slot="title">@item.LastName</div>
+                    <div slot="subtitle">@item.Title</div>
+                    <div slot="end">
+                        <span class="material-icons icon">
+                            star
+                        </span>
+                    </div>
+                </IgbListItem>
+            }
+        </IgbList>
+    </div>
+</div>
+
+@code {
+    private Northwind.EmployeesType[] northwindEmployees = Array.Empty<Northwind.EmployeesType>();
+
+    protected override async Task OnInitializedAsync()
+    {
+        northwindEmployees = await HttpClient.GetFromJsonAsync<Northwind.EmployeesType[]>("static-data/northwind-employees.json") ?? northwindEmployees;
+    }
+}
