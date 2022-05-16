@@ -1,5 +1,5 @@
-//namespace TestingComponentsDontDelete.Data.Northwind; // Razor won't recognize third level namespace
-namespace TestingComponentsDontDelete.Northwind;
+//namespace BlazorTestbed.Data.Northwind; // Razor won't recognize third level namespace
+namespace BlazorTestbed.Northwind;
 
 public class CustomersType
 {

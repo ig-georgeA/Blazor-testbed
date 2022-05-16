@@ -8,7 +8,7 @@
     }
   },
   "profiles": {
-    "TestingComponentsDontDelete": {
+    "BlazorTestbed": {
       "commandName": "Project",
       "dotnetRunMessages": true,
       "launchBrowser": true,

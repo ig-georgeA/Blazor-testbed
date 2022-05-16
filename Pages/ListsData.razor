@@ -43,25 +43,6 @@
                 }
             </IgbList>
         </div>
-        <div class="group_4 column-layout">
-            <IgbList class="list_1" lists-data-scope>
-                @foreach (var item in northwindEmployees)
-                {
-                    <IgbListItem class="list-item" lists-data-scope>
-                        <div slot="start">
-                            <IgbAvatar Src="@item.AvatarUrl" Size="SizableComponentSize.Medium"></IgbAvatar>
-                        </div>
-                        <div slot="title">@item.LastName</div>
-                        <div slot="subtitle">@item.Title</div>
-                        <div slot="end">
-                            <span class="material-icons icon">
-                                star
-                            </span>
-                        </div>
-                    </IgbListItem>
-                }
-            </IgbList>
-        </div>
         <div class="group_4 row-layout">
             <IgbList class="list" lists-data-scope>
                 @foreach (var item in northwindEmployees)

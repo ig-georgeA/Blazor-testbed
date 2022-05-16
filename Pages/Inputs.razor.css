@@ -33,6 +33,13 @@
     min-height: 50px;
 }
 .group_2 {
+    margin: 0 0 32px;
+    min-height: max-content;
+    align-items: stretch;
+    position: relative;
+    min-width: 50px;
+}
+.group_3 {
     padding: 32px;
     width: 500px;
     min-width: 320px;
@@ -41,40 +48,40 @@
     align-items: stretch;
     min-height: 50px;
 }
-.group_3 {
+.group_4 {
     margin: 8px;
     position: relative;
     min-width: 50px;
 }
-.text {
-    min-width: min-content;
-    height: max-content;
-}
-.group_4 {
+.group_5 {
     flex-wrap: wrap;
     align-items: center;
     margin: 0 0 16px;
     min-height: 50px;
     min-width: 50px;
 }
-.group_5 {
+.group_6 {
     align-items: center;
+}
+.element {
+    min-width: min-content;
+    height: max-content;
 }
 .range-slider {
     height: max-content;
     margin: 0 0 16px;
     min-width: 50px;
 }
-.group_6 {
+.group_7 {
     margin: 0 0 16px;
     position: relative;
     min-height: 50px;
     min-width: 50px;
 }
-.group_7 {
+.group_8 {
     align-items: stretch;
 }
-.group_8 {
+.group_9 {
     position: relative;
     min-height: 50px;
     min-width: 50px;

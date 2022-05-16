@@ -1,7 +1,7 @@
 using Microsoft.AspNetCore.Components.Web;
 using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
 using IgniteUI.Blazor.Controls;
-using TestingComponentsDontDelete;
+using BlazorTestbed;
 
 
 var builder = WebAssemblyHostBuilder.CreateDefault(args);
@@ -30,8 +30,8 @@ void RegisterIgniteUI(IServiceCollection services)
         typeof(IgbInputModule),
         typeof(IgbDatePickerModule),
         typeof(IgbSliderModule),
-        typeof(IgbChipModule),
         typeof(IgbRangeSliderModule),
+        typeof(IgbChipModule),
         typeof(IgbSwitchModule),
         typeof(IgbCheckboxModule),
         typeof(IgbRadioGroupModule),
