@@ -26,7 +26,7 @@
     padding: 0.0px;
     height: max-content;
 }
-.sign-in-section {
+.column-layout-1 {
     padding: 36.0px;
     background-color: hsla(var(--igc-surface-500));
     width: 500.0px;

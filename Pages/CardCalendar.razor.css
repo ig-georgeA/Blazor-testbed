@@ -15,7 +15,6 @@
 }
 .group_1 {
     display: flex;
-    flex-drection: row;
 }
 .actions-content {
     flex-direction: column;
@@ -94,11 +93,6 @@
     width: max-content;
     height: max-content;
     flex-shrink: 0;
-}
-.button-group {
-    min-width: min-content;
-    flex-shrink: 0;
-    height: max-content;
 }
 .button {
     width: max-content;
