@@ -1,57 +1,63 @@
+.row-layout {
+    display: flex;
+}
 .sign-in-page-container {
     justify-content: flex-end;
-    height: 100%;
     align-items: stretch;
+    align-content: flex-start;
+    height: 100%;
 }
 .row-layout-1 {
-    justify-content: center;
-    flex-grow: 1;
-    flex-basis: 0;
     background-color: hsla(var(--igc-gray-200));
+    justify-content: center;
     align-items: center;
+    align-content: flex-start;
     margin: 0.0px;
     padding: 0.0px;
+    flex-grow: 1;
+    flex-basis: 0;
+}
+.column-layout {
+    display: flex;
+    flex-direction: column;
+}
+.column-layout-1 {
+    background-color: hsla(var(--igc-surface-500));
+    border-color: hsla(var(--igc-gray-400));
+    border-width: 2px;
+    border-style: solid;
+    justify-content: flex-start;
+    align-items: stretch;
+    align-content: flex-start;
+    margin: 0.0px;
+    padding: 36.0px;
+    width: 500.0px;
+    height: max-content;
+    flex-shrink: 0;
 }
 .row-layout-2 {
     justify-content: space-between;
     align-items: center;
+    align-content: flex-start;
     margin: 0.0px 0.0px 32.0px;
-    flex-shrink: 0;
     padding: 0.0px;
     height: max-content;
+    flex-shrink: 0;
 }
-.text-2 {
-    margin: 0.0px 0.0px 16.0px;
+.title-1 {
     text-align: center;
+    margin: 0.0px 0.0px 32.0px;
     padding: 0.0px;
-    height: max-content;
-}
-.column-layout-1 {
-    padding: 36.0px;
-    background-color: hsla(var(--igc-surface-500));
-    width: 500.0px;
-    border-color: hsla(var(--igc-gray-400));
-    border-width: 2px;
-    border-style: solid;
-    align-items: stretch;
-    margin: 0.0px;
-    flex-shrink: 0;
     height: max-content;
 }
 .hyperlink {
+    height: max-content;
     min-width: min-content;
     flex-shrink: 0;
-    height: max-content;
 }
-.title-1 {
-    margin: 0.0px 0.0px 32.0px;
+.text-2 {
     text-align: center;
-    padding: 0.0px;
-    height: max-content;
-}
-.checkbox-1 {
-    margin: 0.0px;
-    width: max-content;
+    margin: 0.0px 0.0px 16.0px;
     padding: 0.0px;
     height: max-content;
 }
@@ -65,10 +71,9 @@
     padding: 0.0px;
     height: max-content;
 }
-.row-layout {
-    display: flex;
-}
-.column-layout {
-    display: flex;
-    flex-direction: column;
+.checkbox-1 {
+    margin: 0.0px;
+    padding: 0.0px;
+    width: max-content;
+    height: max-content;
 }

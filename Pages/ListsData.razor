@@ -1,9 +1,8 @@
 @page "/lists-data"
-@inject NavigationManager NavigationManager
-@inject HttpClient HttpClient
+@inject Northwind.NorthwindService northwindService
 
-<div class="lists-data-container column-layout">
-    <div class="group row-layout">
+<div class="column-layout lists-data-container">
+    <div class="row-layout group">
         @foreach (var item in northwindEmployees)
         {
             <IgbCard Outlined="true" class="card" lists-data-scope>
@@ -23,8 +22,8 @@
             </IgbCard>
         }
     </div>
-    <div class="group_1 row-layout">
-        <div class="group_4 row-layout">
+    <div class="row-layout group_1">
+        <div class="column-layout group_2">
             <IgbList class="list" lists-data-scope>
                 @foreach (var item in northwindEmployees)
                 {
@@ -43,7 +42,7 @@
                 }
             </IgbList>
         </div>
-        <div class="group_4 row-layout">
+        <div class="column-layout group_2">
             <IgbList class="list" lists-data-scope>
                 @foreach (var item in northwindEmployees)
                 {
@@ -54,8 +53,8 @@
                         <div slot="title">@item.LastName</div>
                         <div slot="subtitle">@item.Title</div>
                         <div>
-                            <div class="group_2 row-layout">
-                                <div class="group_3 column-layout">
+                            <div class="row-layout group_3">
+                                <div class="column-layout group_4">
                                     <p class="typography__caption text">
                                         Birthday
                                     </p>
@@ -63,7 +62,7 @@
                                         @item.BirthDate
                                     </p>
                                 </div>
-                                <div class="group_3 column-layout">
+                                <div class="column-layout group_4">
                                     <p class="typography__caption text">
                                         Country
                                     </p>
@@ -85,6 +84,6 @@
 
     protected override async Task OnInitializedAsync()
     {
-        northwindEmployees = await HttpClient.GetFromJsonAsync<Northwind.EmployeesType[]>("static-data/northwind-employees.json") ?? northwindEmployees;
+        northwindEmployees = await this.northwindService.GetEmployees() ?? northwindEmployees;
     }
 }

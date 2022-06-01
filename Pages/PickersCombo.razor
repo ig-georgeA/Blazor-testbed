@@ -1,24 +1,22 @@
 @page "/pickers-combo"
-@inject NavigationManager NavigationManager
-@inject HttpClient HttpClient
 
-<div class="pickers-combo-container column-layout">
-    <div class="group_1 row-layout">
-        <div class="group_2 column-layout">
+<div class="column-layout pickers-combo-container">
+    <div class="row-layout group">
+        <div class="column-layout group_1">
             <span class="user-input">Select not yet available in Blazor</span>
             <span class="user-input">Select not yet available in Blazor</span>
             <span class="user-input">Select not yet available in Blazor</span>
             <span class="user-input">Select not yet available in Blazor</span>
             <span class="user-input">Select not yet available in Blazor</span>
         </div>
-        <div class="group_2 column-layout">
+        <div class="column-layout group_1">
             <span class="user-input">Combo not yet available in Blazor</span>
             <span class="user-input">Combo not yet available in Blazor</span>
             <span class="user-input">Combo not yet available in Blazor</span>
             <span class="user-input">Combo not yet available in Blazor</span>
         </div>
     </div>
-    <div class="group row-layout">
+    <div class="row-layout group_2">
         <IgbButton @onclick="@(e => Dropdown?.Toggle(Button))" @ref="Button" class="button" pickers-combo-scope>
             Open dropdown
             <IgbRipple></IgbRipple>

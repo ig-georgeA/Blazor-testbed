@@ -1,9 +1,8 @@
 @page "/data-grid-layouts"
-@inject NavigationManager NavigationManager
-@inject HttpClient HttpClient
+@inject Northwind.NorthwindService northwindService
 
-<div class="data-grid-layouts-container column-layout">
-    <IgbDataGrid DataSource="northwindCustomers" Density="ControlDisplayDensity.Cosy" SelectionMode="GridSelectionMode.MultipleRow" ColumnMovingMode="ColumnMovingMode.Deferred" AutoGenerateColumns="false" DefaultColumnMinWidth="136" class="grid" data-grid-layouts-scope>
+<div class="column-layout data-grid-layouts-container">
+    <IgbDataGrid DataSource="northwindCustomers" Density="ControlDisplayDensity.Cosy" SelectionMode="GridSelectionMode.MultipleRow" ColumnMovingMode="ColumnMovingMode.Deferred" AutoGenerateColumns="false" DefaultColumnMinWidth="136" class="grid-plus" data-grid-layouts-scope>
         <IgbDataGridToolbar ToolbarTitle="Grid Toolbar">
             <span>GridToolbarActions not yet available in Blazor</span>
         </IgbDataGridToolbar>
@@ -11,14 +10,14 @@
         <IgbTextColumn HeaderText="companyName" Field="CompanyName" IsResizingEnabled="true" IsEditable="true" IsFilteringEnabled="true"></IgbTextColumn>
         <IgbTextColumn HeaderText="contactName" Field="ContactName" IsResizingEnabled="true" IsEditable="true" IsFilteringEnabled="true"></IgbTextColumn>
         <IgbTextColumn HeaderText="contactTitle" Field="ContactTitle" IsResizingEnabled="true" IsEditable="true" IsFilteringEnabled="true"></IgbTextColumn>
-        <IgbTextColumn HeaderText="street" Field="Address.street" IsResizingEnabled="true" IsEditable="true" IsFilteringEnabled="true"></IgbTextColumn>
-        <IgbTextColumn HeaderText="city" Field="Address.city" IsResizingEnabled="true" IsEditable="true" IsFilteringEnabled="true"></IgbTextColumn>
-        <IgbTextColumn HeaderText="region" Field="Address.region" IsResizingEnabled="true" IsEditable="true" IsFilteringEnabled="true"></IgbTextColumn>
-        <IgbTextColumn HeaderText="postalCode" Field="Address.postalCode" IsResizingEnabled="true" IsEditable="true" IsFilteringEnabled="true"></IgbTextColumn>
-        <IgbTextColumn HeaderText="country" Field="Address.country" IsResizingEnabled="true" IsEditable="true" IsFilteringEnabled="true"></IgbTextColumn>
-        <IgbTextColumn HeaderText="phone" Field="Address.phone" IsResizingEnabled="true" IsEditable="true" IsFilteringEnabled="true"></IgbTextColumn>
+        <IgbTextColumn HeaderText="street" Field="Address.Street" IsResizingEnabled="true" IsEditable="true" IsFilteringEnabled="true"></IgbTextColumn>
+        <IgbTextColumn HeaderText="city" Field="Address.City" IsResizingEnabled="true" IsEditable="true" IsFilteringEnabled="true"></IgbTextColumn>
+        <IgbTextColumn HeaderText="region" Field="Address.Region" IsResizingEnabled="true" IsEditable="true" IsFilteringEnabled="true"></IgbTextColumn>
+        <IgbTextColumn HeaderText="postalCode" Field="Address.PostalCode" IsResizingEnabled="true" IsEditable="true" IsFilteringEnabled="true"></IgbTextColumn>
+        <IgbTextColumn HeaderText="country" Field="Address.Country" IsResizingEnabled="true" IsEditable="true" IsFilteringEnabled="true"></IgbTextColumn>
+        <IgbTextColumn HeaderText="phone" Field="Address.Phone" IsResizingEnabled="true" IsEditable="true" IsFilteringEnabled="true"></IgbTextColumn>
     </IgbDataGrid>
-    <IgbDataGrid DataSource="northwindEmployees" Density="ControlDisplayDensity.Cosy" AutoGenerateColumns="false" SelectionMode="GridSelectionMode.None" DefaultColumnMinWidth="136" class="grid" data-grid-layouts-scope>
+    <IgbDataGrid DataSource="northwindEmployees" Density="ControlDisplayDensity.Cosy" AutoGenerateColumns="false" SelectionMode="GridSelectionMode.None" DefaultColumnMinWidth="136" class="grid-plus" data-grid-layouts-scope>
         <IgbNumericColumn HeaderText="employeeID" Field="EmployeeID" IsFilteringEnabled="true"></IgbNumericColumn>
         <IgbTextColumn HeaderText="lastName" Field="LastName" IsFilteringEnabled="true"></IgbTextColumn>
         <IgbTextColumn HeaderText="firstName" Field="FirstName" IsFilteringEnabled="true"></IgbTextColumn>
@@ -26,12 +25,12 @@
         <IgbTextColumn HeaderText="titleOfCourtesy" Field="TitleOfCourtesy" IsFilteringEnabled="true"></IgbTextColumn>
         <IgbDateTimeColumn HeaderText="birthDate" Field="BirthDate" IsFilteringEnabled="true"></IgbDateTimeColumn>
         <IgbDateTimeColumn HeaderText="hireDate" Field="HireDate" IsFilteringEnabled="true"></IgbDateTimeColumn>
-        <IgbTextColumn HeaderText="street" Field="Address.street" IsFilteringEnabled="true"></IgbTextColumn>
-        <IgbTextColumn HeaderText="city" Field="Address.city" IsFilteringEnabled="true"></IgbTextColumn>
-        <IgbTextColumn HeaderText="region" Field="Address.region" IsFilteringEnabled="true"></IgbTextColumn>
-        <IgbTextColumn HeaderText="postalCode" Field="Address.postalCode" IsFilteringEnabled="true"></IgbTextColumn>
-        <IgbTextColumn HeaderText="country" Field="Address.country" IsFilteringEnabled="true"></IgbTextColumn>
-        <IgbTextColumn HeaderText="phone" Field="Address.phone" IsFilteringEnabled="true"></IgbTextColumn>
+        <IgbTextColumn HeaderText="street" Field="Address.Street" IsFilteringEnabled="true"></IgbTextColumn>
+        <IgbTextColumn HeaderText="city" Field="Address.City" IsFilteringEnabled="true"></IgbTextColumn>
+        <IgbTextColumn HeaderText="region" Field="Address.Region" IsFilteringEnabled="true"></IgbTextColumn>
+        <IgbTextColumn HeaderText="postalCode" Field="Address.PostalCode" IsFilteringEnabled="true"></IgbTextColumn>
+        <IgbTextColumn HeaderText="country" Field="Address.Country" IsFilteringEnabled="true"></IgbTextColumn>
+        <IgbTextColumn HeaderText="phone" Field="Address.Phone" IsFilteringEnabled="true"></IgbTextColumn>
         <IgbTextColumn HeaderText="notes" Field="Notes" IsFilteringEnabled="true"></IgbTextColumn>
         <IgbTextColumn HeaderText="avatarUrl" Field="AvatarUrl" IsFilteringEnabled="true"></IgbTextColumn>
     </IgbDataGrid>
@@ -43,7 +42,7 @@
 
     protected override async Task OnInitializedAsync()
     {
-        northwindCustomers = await HttpClient.GetFromJsonAsync<Northwind.CustomersType[]>("static-data/northwind-customers.json") ?? northwindCustomers;
-        northwindEmployees = await HttpClient.GetFromJsonAsync<Northwind.EmployeesType[]>("static-data/northwind-employees.json") ?? northwindEmployees;
+        northwindCustomers = await this.northwindService.GetCustomers() ?? northwindCustomers;
+        northwindEmployees = await this.northwindService.GetEmployees() ?? northwindEmployees;
     }
 }

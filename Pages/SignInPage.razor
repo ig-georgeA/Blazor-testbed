@@ -1,16 +1,14 @@
 @page "/sign-in-page"
-@inject NavigationManager NavigationManager
-@inject HttpClient HttpClient
 
-<div class="sign-in-page-container row-layout">
-    <div class="row-layout-1 row-layout">
-        <div class="column-layout-1 column-layout">
+<div class="row-layout sign-in-page-container">
+    <div class="row-layout row-layout-1">
+        <div class="column-layout column-layout-1">
             <h5 class="title-1">
                 Sign in
             </h5>
             <IgbInput Label="Username" Outlined="false" class="user-input" sign-in-page-scope></IgbInput>
             <IgbInput DisplayType="InputType.Password" Label="Password" Outlined="false" class="user-input_1" sign-in-page-scope></IgbInput>
-            <div class="row-layout-2 row-layout">
+            <div class="row-layout row-layout-2">
                 <IgbCheckbox class="checkbox-1" sign-in-page-scope>
                     Remember me
                 </IgbCheckbox>
