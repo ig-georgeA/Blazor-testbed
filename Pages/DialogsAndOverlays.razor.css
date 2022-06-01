@@ -67,12 +67,10 @@
     width: 24px;
     height: 24px;
 }
-.custom-dialog {
-    min-width: 0;
-    min-height: 0;
-}
 .snackbar {
     z-index: 1;
+    right: -11.484375px;
+    bottom: 137.0078125px;
     position: fixed;
     height: max-content;
     min-width: min-content;

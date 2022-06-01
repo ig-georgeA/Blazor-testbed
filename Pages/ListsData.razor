@@ -16,7 +16,7 @@
                         </h5>
                     </IgbCardHeader>
                 </div>
-                <IgbCardMedia>
+                <IgbCardMedia class="media-content" lists-data-scope>
                     <img src="@item.AvatarUrl" />
                 </IgbCardMedia>
             </IgbCard>
@@ -27,7 +27,7 @@
             <IgbList class="list" lists-data-scope>
                 @foreach (var item in northwindEmployees)
                 {
-                    <IgbListItem class="list-item" lists-data-scope>
+                    <IgbListItem>
                         <div slot="start">
                             <IgbAvatar Src="@item.AvatarUrl" Size="SizableComponentSize.Medium"></IgbAvatar>
                         </div>
@@ -46,7 +46,7 @@
             <IgbList class="list" lists-data-scope>
                 @foreach (var item in northwindEmployees)
                 {
-                    <IgbListItem class="list-item" lists-data-scope>
+                    <IgbListItem>
                         <div slot="start">
                             <IgbAvatar Src="@item.AvatarUrl" Size="SizableComponentSize.Large" Shape="AvatarShape.Circle"></IgbAvatar>
                         </div>

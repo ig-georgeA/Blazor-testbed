@@ -85,13 +85,22 @@
     flex-grow: 1;
     flex-shrink: 0;
 }
+.media-content {
+    height: 200px;
+}
 .actions-content {
     min-width: 50px;
     min-height: 40px;
 }
+.media-content_1 {
+    height: 300px;
+}
 .body-content {
     min-width: 50px;
     min-height: 50px;
+}
+.media-content_2 {
+    width: 96px;
 }
 .actions-content_1 {
     flex-direction: column;

@@ -34,10 +34,6 @@
     min-height: 0;
     flex-shrink: 0;
 }
-.nav-drawer-item {
-    min-width: 0;
-    min-height: 0;
-}
 .view-container {
     position: relative;
     min-width: 0;
@@ -46,10 +42,6 @@
 }
 .nav-drawer::part(main) {
     width: 320px;
-}
-.nav-drawer-item_1 {
-    min-width: 0;
-    min-height: 0;
 }
 .button::part(base) {
     color: hsla(var(--igc-gray-900));
