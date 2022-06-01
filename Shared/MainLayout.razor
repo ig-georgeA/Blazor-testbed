@@ -1,10 +1,10 @@
 @inherits LayoutComponentBase
 @inject NavigationManager NavigationManager
 
-<div class="main-navigation-container column-layout">
+<div class="column-layout main-navigation-container">
     <IgbNavbar class="navbar" main-navigation-scope>
         <div slot="start">
-            <IgbButton Variant="ButtonVariant.Flat" @onclick="@(e => NavDrawer?.Toggle())" class="icon-button button" main-navigation-scope>
+            <IgbButton Variant="ButtonVariant.Flat" class="icon-button button" @onclick="@(e => NavDrawer?.Toggle())" main-navigation-scope>
                 <span class="material-icons">
                     menu
                 </span>
@@ -33,127 +33,140 @@
         </div>
         <div>Testing Samples</div>
     </IgbNavbar>
-    <div class="group row-layout">
+    <div class="row-layout group">
         <IgbNavDrawer Open="true" Position="NavDrawerPosition.Relative" @ref="NavDrawer" class="nav-drawer" main-navigation-scope>
-            <IgbNavDrawerHeaderItem class="nav-drawer-item" main-navigation-scope>
-                <div slot="content">Layouts</div>
+            <IgbNavDrawerHeaderItem class="nav-drawer-item_1" main-navigation-scope>
+                <div>Layouts</div>
             </IgbNavDrawerHeaderItem>
-            <IgbNavDrawerItem @onclick="@(e => Navigate("/"))" class="nav-drawer-item_1" main-navigation-scope>
+            <IgbNavDrawerItem @onclick="@(e => Navigate("/"))" class="nav-drawer-item" main-navigation-scope>
                 <span slot="icon">
                     <span class="material-icons icon">
                         view_quilt
                     </span>
+                    <IgbRipple></IgbRipple>
                 </span>
                 <div slot="content">Flex layouts</div>
             </IgbNavDrawerItem>
-            <IgbNavDrawerItem @onclick="@(e => Navigate("/position"))" class="nav-drawer-item_1" main-navigation-scope>
+            <IgbNavDrawerItem @onclick="@(e => Navigate("/position"))" class="nav-drawer-item" main-navigation-scope>
                 <span slot="icon">
                     <span class="material-icons icon">
                         my_location
                     </span>
+                    <IgbRipple></IgbRipple>
                 </span>
                 <div slot="content">Position</div>
             </IgbNavDrawerItem>
-            <IgbNavDrawerItem @onclick="@(e => Navigate("/tab-layout"))" class="nav-drawer-item_1" main-navigation-scope>
+            <IgbNavDrawerItem @onclick="@(e => Navigate("/tab-layout"))" class="nav-drawer-item" main-navigation-scope>
                 <span slot="icon">
                     <span class="material-icons icon">
                         tab
                     </span>
+                    <IgbRipple></IgbRipple>
                 </span>
                 <div slot="content">Tab layout</div>
             </IgbNavDrawerItem>
-            <IgbNavDrawerHeaderItem class="nav-drawer-item" main-navigation-scope>
-                <div slot="content">Content</div>
+            <IgbNavDrawerHeaderItem class="nav-drawer-item_1" main-navigation-scope>
+                <div>Content</div>
             </IgbNavDrawerHeaderItem>
-            <IgbNavDrawerItem @onclick="@(e => Navigate("/card-calendar"))" class="nav-drawer-item_1" main-navigation-scope>
+            <IgbNavDrawerItem @onclick="@(e => Navigate("/card-calendar"))" class="nav-drawer-item" main-navigation-scope>
                 <span slot="icon">
                     <span class="material-icons icon">
                         calendar_today
                     </span>
+                    <IgbRipple></IgbRipple>
                 </span>
                 <div slot="content">Card-Calendar</div>
             </IgbNavDrawerItem>
-            <IgbNavDrawerItem @onclick="@(e => Navigate("/lists-data"))" class="nav-drawer-item_1" main-navigation-scope>
+            <IgbNavDrawerItem @onclick="@(e => Navigate("/lists-data"))" class="nav-drawer-item" main-navigation-scope>
                 <span slot="icon">
                     <span class="material-icons icon">
                         list_alt
                     </span>
+                    <IgbRipple></IgbRipple>
                 </span>
                 <div slot="content">List + data</div>
             </IgbNavDrawerItem>
-            <IgbNavDrawerItem @onclick="@(e => Navigate("/data-grid-layouts"))" class="nav-drawer-item_1" main-navigation-scope>
+            <IgbNavDrawerItem @onclick="@(e => Navigate("/data-grid-layouts"))" class="nav-drawer-item" main-navigation-scope>
                 <span slot="icon">
                     <span class="material-icons icon">
                         list_alt
                     </span>
+                    <IgbRipple></IgbRipple>
                 </span>
                 <div slot="content">Data grid</div>
             </IgbNavDrawerItem>
-            <IgbNavDrawerItem @onclick="@(e => Navigate("/type-scale"))" class="nav-drawer-item_1" main-navigation-scope>
+            <IgbNavDrawerItem @onclick="@(e => Navigate("/type-scale"))" class="nav-drawer-item" main-navigation-scope>
                 <span slot="icon">
                     <span class="material-icons icon">
                         text_fields
                     </span>
+                    <IgbRipple></IgbRipple>
                 </span>
                 <div slot="content">Type scale + text</div>
             </IgbNavDrawerItem>
-            <IgbNavDrawerHeaderItem class="nav-drawer-item" main-navigation-scope>
-                <div slot="content">Inputs</div>
+            <IgbNavDrawerHeaderItem class="nav-drawer-item_1" main-navigation-scope>
+                <div>Inputs</div>
             </IgbNavDrawerHeaderItem>
-            <IgbNavDrawerItem @onclick="@(e => Navigate("/inputs"))" class="nav-drawer-item_1" main-navigation-scope>
+            <IgbNavDrawerItem @onclick="@(e => Navigate("/inputs"))" class="nav-drawer-item" main-navigation-scope>
                 <span slot="icon">
                     <span class="material-icons icon">
                         keyboard
                     </span>
+                    <IgbRipple></IgbRipple>
                 </span>
                 <div slot="content">Inputs + buttons</div>
             </IgbNavDrawerItem>
-            <IgbNavDrawerItem @onclick="@(e => Navigate("/pickers-combo"))" class="nav-drawer-item_1" main-navigation-scope>
+            <IgbNavDrawerItem @onclick="@(e => Navigate("/pickers-combo"))" class="nav-drawer-item" main-navigation-scope>
                 <span slot="icon">
                     <span class="material-icons icon">
                         arrow_drop_down_circle
                     </span>
+                    <IgbRipple></IgbRipple>
                 </span>
                 <div slot="content">Pickers</div>
             </IgbNavDrawerItem>
-            <IgbNavDrawerHeaderItem class="nav-drawer-item" main-navigation-scope>
-                <div slot="content">Notifications</div>
+            <IgbNavDrawerHeaderItem class="nav-drawer-item_1" main-navigation-scope>
+                <div>Notifications</div>
             </IgbNavDrawerHeaderItem>
-            <IgbNavDrawerItem @onclick="@(e => Navigate("/dialogs-and-overlays"))" class="nav-drawer-item_1" main-navigation-scope>
+            <IgbNavDrawerItem @onclick="@(e => Navigate("/dialogs-and-overlays"))" class="nav-drawer-item" main-navigation-scope>
                 <span slot="icon">
                     <span class="material-icons icon">
                         open_in_new
                     </span>
+                    <IgbRipple></IgbRipple>
                 </span>
                 <div slot="content">Dialogs and overlays</div>
             </IgbNavDrawerItem>
-            <IgbNavDrawerHeaderItem class="nav-drawer-item" main-navigation-scope>
-                <div slot="content">Misc</div>
+            <IgbNavDrawerHeaderItem class="nav-drawer-item_1" main-navigation-scope>
+                <div>Misc</div>
             </IgbNavDrawerHeaderItem>
-            <IgbNavDrawerItem @onclick="@(e => Navigate("/sign-in-page"))" class="nav-drawer-item_1" main-navigation-scope>
+            <IgbNavDrawerItem @onclick="@(e => Navigate("/sign-in-page"))" class="nav-drawer-item" main-navigation-scope>
                 <span slot="icon">
                     <span class="material-icons icon">
                         account_circle
                     </span>
+                    <IgbRipple></IgbRipple>
                 </span>
                 <div slot="content">Sign in</div>
             </IgbNavDrawerItem>
-            <IgbNavDrawerItem @onclick="@(e => Navigate("/image"))" class="nav-drawer-item_1" main-navigation-scope>
+            <IgbNavDrawerItem @onclick="@(e => Navigate("/image"))" class="nav-drawer-item" main-navigation-scope>
                 <span slot="icon">
                     <span class="material-icons icon">
                         account_circle
                     </span>
+                    <IgbRipple></IgbRipple>
                 </span>
                 <div slot="content">Images</div>
             </IgbNavDrawerItem>
-            <IgbNavDrawerHeaderItem class="nav-drawer-item" main-navigation-scope>
-                <div slot="content">Interactions</div>
+            <IgbNavDrawerHeaderItem class="nav-drawer-item_1" main-navigation-scope>
+                <div>Interactions</div>
             </IgbNavDrawerHeaderItem>
-            <IgbNavDrawerItem class="nav-drawer-item_1" main-navigation-scope>
+            <IgbNavDrawerItem class="nav-drawer-item" main-navigation-scope>
                 <span slot="icon">
                     <span class="material-icons icon">
                         remove_red_eye
                     </span>
+                    <IgbRipple></IgbRipple>
                 </span>
                 <div slot="content">Show/hide interacitons</div>
             </IgbNavDrawerItem>

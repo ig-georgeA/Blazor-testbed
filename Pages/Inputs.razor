@@ -1,43 +1,41 @@
 @page "/inputs"
-@inject NavigationManager NavigationManager
-@inject HttpClient HttpClient
 
-<div class="inputs-container row-layout">
+<div class="row-layout inputs-container">
     <div class="column-layout column-layout_1">
-        <IgbInput Label="Label/Placeholder" Outlined="false" class="input user-input_4" inputs-scope>
+        <IgbInput Label="Label/Placeholder" Outlined="false" class="input" inputs-scope>
             <span slot="prefix">
-                <span class="material-icons icon_2 icon_3">
+                <span class="material-icons icon">
                     person
                 </span>
             </span>
             <span slot="suffix">
-                <span class="material-icons icon_2 icon_3">
+                <span class="material-icons icon">
                     clear
                 </span>
             </span>
         </IgbInput>
-        <IgbInput Label="I'm disabled" Disabled="true" Outlined="false" class="input user-input_4" inputs-scope></IgbInput>
-        <IgbInput Label="Label +prefix+box+help" Outlined="false" class="input user-input_4" inputs-scope>
+        <IgbInput Label="I'm disabled" Disabled="true" Outlined="false" class="input" inputs-scope></IgbInput>
+        <IgbInput Label="Label +prefix+box+help" Outlined="false" class="input" inputs-scope>
             <span slot="prefix">
-                <span class="material-icons icon_3 icon_5">
+                <span class="material-icons icon_1">
                     person
                 </span>
             </span>
             <span slot="helper-text">sample hint text</span>
         </IgbInput>
-        <IgbInput Label="Label/Placeholder" Outlined="false" class="input user-input_4" inputs-scope></IgbInput>
-        <IgbDatePicker Value="date" Label="Date" class="user-input_3 user-input_4" inputs-scope></IgbDatePicker>
-        <IgbDatePicker Value="date" Label="Date-box style-input format 1" class="user-input_3 user-input_4" inputs-scope></IgbDatePicker>
-        <IgbDatePicker Value="date" Label="Date-box style - input format 2" class="user-input_3 user-input_4" inputs-scope></IgbDatePicker>
-        <IgbDatePicker Value="date" Label="Date" class="user-input_3 user-input_4" inputs-scope></IgbDatePicker>
-        <IgbDatePicker Value="date" Label="Date" class="user-input_3 user-input_4" inputs-scope></IgbDatePicker>
+        <IgbInput Label="Label/Placeholder" Outlined="false" class="input" inputs-scope></IgbInput>
+        <IgbDatePicker Value="date" Label="Date" class="date-picker" inputs-scope></IgbDatePicker>
+        <IgbDatePicker Value="date" Label="Date-box style-input format 1" class="date-picker" inputs-scope></IgbDatePicker>
+        <IgbDatePicker Value="date" Label="Date-box style - input format 2" class="date-picker" inputs-scope></IgbDatePicker>
+        <IgbDatePicker Value="date" Label="Date" class="date-picker" inputs-scope></IgbDatePicker>
+        <IgbDatePicker Value="date" Label="Date" class="date-picker" inputs-scope></IgbDatePicker>
         <IgbSlider Value="50" Disabled="true" Min="0" Max="100" PrimaryTicks="3" SecondaryTicks="2" HideSecondaryLabels="false" class="slider" inputs-scope></IgbSlider>
-        <IgbSlider Value="50" Min="0" Max="100" class="slider user-input_3" inputs-scope></IgbSlider>
-        <IgbRangeSlider Lower="20" Upper="80" Min="0" Max="100" Step="10" class="range-slider" inputs-scope></IgbRangeSlider>
-        <div class="group_2 row-layout">
+        <IgbSlider Value="50" Min="0" Max="100" class="slider_1" inputs-scope></IgbSlider>
+        <IgbRangeSlider Lower="20" Upper="80" Min="0" Max="100" Step="10" DiscreteTrack="true" class="range-slider" inputs-scope></IgbRangeSlider>
+        <div class="row-layout group">
             <IgbChip Size="SizableComponentSize.Large" class="chip" inputs-scope>
                 <span slot="prefix">
-                    <span class="material-icons icon_5">
+                    <span class="material-icons icon_2">
                         place
                     </span>
                 </span>
@@ -45,7 +43,7 @@
             </IgbChip>
             <IgbChip Size="SizableComponentSize.Large" class="chip" inputs-scope>
                 <span slot="prefix">
-                    <span class="material-icons icon_5">
+                    <span class="material-icons icon_2">
                         place
                     </span>
                 </span>
@@ -53,105 +51,105 @@
             </IgbChip>
             <IgbChip Size="SizableComponentSize.Large" class="chip_1" inputs-scope>
                 <span slot="prefix">
-                    <span class="material-icons icon_5">
+                    <span class="material-icons icon_2">
                         account_balance
                     </span>
                 </span>
                 <span slot="suffix">
-                    <span class="material-icons icon_5">
+                    <span class="material-icons icon_2">
                         clear
                     </span>
                 </span>
                 Country
             </IgbChip>
         </div>
-        <span class="element">Textarea not yet available in Blazor</span>
+        <span class="textarea">Textarea not yet available in Blazor</span>
     </div>
-    <div class="group_3 column-layout_1">
-        <IgbInput Label="Label + prefix + suffix + border" Outlined="true" class="input user-input_4" inputs-scope>
+    <div class="column-layout group_1">
+        <IgbInput Label="Label + prefix + suffix + border" Outlined="true" class="input" inputs-scope>
             <span slot="prefix">
-                <p class="typography__body-2 element">
+                <p class="typography__body-2 text">
                     https://
                 </p>
             </span>
             <span slot="suffix">
-                <p class="typography__body-2 element">
-                    .com
+                <p class="typography__body-2 text">
+                    com
                 </p>
             </span>
         </IgbInput>
-        <IgbInput @bind-Value="value" Label="Label + required" Required="true" Outlined="true" class="input user-input_4" inputs-scope></IgbInput>
-        <IgbInput Label="I'm disabled" Disabled="true" Outlined="true" class="input user-input_4" inputs-scope></IgbInput>
-        <IgbInput Label="Label/Placeholder" Required="true" Outlined="true" class="input user-input_4" inputs-scope></IgbInput>
-        <IgbInput Label="Prefix, helptext and border" Outlined="true" class="input user-input_4" inputs-scope>
+        <IgbInput @bind-Value="value" Label="Label + required" Required="true" Outlined="true" class="input" inputs-scope></IgbInput>
+        <IgbInput Label="I'm disabled" Disabled="true" Outlined="true" class="input" inputs-scope></IgbInput>
+        <IgbInput Label="Label/Placeholder" Required="true" Outlined="true" class="input" inputs-scope></IgbInput>
+        <IgbInput Label="Prefix, helptext and border" Outlined="true" class="input" inputs-scope>
             <span slot="prefix">
-                <span class="material-icons icon_2 icon_3">
+                <span class="material-icons icon">
                     person
                 </span>
             </span>
             <span slot="helper-text">sample hint text</span>
         </IgbInput>
-        <div class="group_5 row-layout">
-            <IgbButton Variant="ButtonVariant.Outlined" class="button user-input_1" inputs-scope>
+        <div class="row-layout group_2">
+            <IgbButton Variant="ButtonVariant.Outlined" class="button" inputs-scope>
                 <span class="material-icons">
                     add
                 </span>
                 <span>Button</span>
                 <IgbRipple></IgbRipple>
             </IgbButton>
-            <IgbButton Variant="ButtonVariant.Outlined" Disabled="true" class="button user-input_1" inputs-scope>
+            <IgbButton Variant="ButtonVariant.Outlined" Disabled="true" class="button" inputs-scope>
                 <span class="material-icons">
                     add
                 </span>
                 <span>Button</span>
                 <IgbRipple></IgbRipple>
             </IgbButton>
-            <IgbButton class="button user-input_1" inputs-scope>
+            <IgbButton class="button" inputs-scope>
                 <span class="material-icons">
                     star
                 </span>
                 <span>Button</span>
                 <IgbRipple></IgbRipple>
             </IgbButton>
-            <IgbButton Variant="ButtonVariant.Flat" class="button user-input_1" inputs-scope>
+            <IgbButton Variant="ButtonVariant.Flat" class="button" inputs-scope>
                 <span>Button</span>
                 <span class="material-icons">
                     add
                 </span>
                 <IgbRipple></IgbRipple>
             </IgbButton>
-            <IgbButton Variant="ButtonVariant.Fab" class="user-input_2" inputs-scope>
+            <IgbButton Variant="ButtonVariant.Fab" class="user-input" inputs-scope>
                 <span class="material-icons">
                     add
                 </span>
                 <IgbRipple></IgbRipple>
             </IgbButton>
-            <IgbButton Variant="ButtonVariant.Flat" class="icon-button button" inputs-scope>
+            <IgbButton Variant="ButtonVariant.Flat" class="icon-button button_2" inputs-scope>
                 <span class="material-icons">
                     email
                 </span>
                 <IgbRipple></IgbRipple>
             </IgbButton>
         </div>
-        <div class="group_7 column-layout_1">
-            <div class="group_4 group_6 row-layout">
-                <span class="user-input_1">ButtonGroup not yet available in Blazor</span>
-                <IgbSwitch Checked="true" class="user-input" inputs-scope>
+        <div class="column-layout group_3">
+            <div class="row-layout group_4">
+                <span class="button-group">ButtonGroup not yet available in Blazor</span>
+                <IgbSwitch Checked="true" class="user-input_1" inputs-scope>
                     Notify me
                 </IgbSwitch>
-                <IgbSwitch Checked="true" class="user-input" inputs-scope></IgbSwitch>
+                <IgbSwitch Checked="true" class="user-input_1" inputs-scope></IgbSwitch>
             </div>
-            <div class="group_4 group_8 row-layout">
+            <div class="row-layout group_5">
                 <IgbCheckbox Checked="true" Indeterminate="false" class="checkbox" inputs-scope></IgbCheckbox>
                 <IgbCheckbox Checked="true" Indeterminate="false" class="checkbox" inputs-scope>
                     Does it work?
                 </IgbCheckbox>
-                <IgbCheckbox LabelPosition="CheckboxBaseLabelPosition.Before" Checked="true" Indeterminate="false" class="user-input_2" inputs-scope>
+                <IgbCheckbox LabelPosition="CheckboxBaseLabelPosition.Before" Checked="true" Indeterminate="false" class="user-input" inputs-scope>
                     How about now?
                 </IgbCheckbox>
             </div>
         </div>
-        <div class="group_1 row-layout">
+        <div class="row-layout group_6">
             <IgbRadioGroup class="radio-group" inputs-scope>
                 <IgbRadio Value="1" class="radio" inputs-scope>
                     Label
@@ -163,7 +161,7 @@
                     Label
                 </IgbRadio>
             </IgbRadioGroup>
-            <IgbRadioGroup Alignment="RadioGroupAlignment.Horizontal" class="user-input" inputs-scope>
+            <IgbRadioGroup Alignment="RadioGroupAlignment.Horizontal" class="user-input_1" inputs-scope>
                 <IgbRadio Value="1" class="radio" inputs-scope>
                     Label
                 </IgbRadio>
@@ -175,9 +173,9 @@
                 </IgbRadio>
             </IgbRadioGroup>
         </div>
-        <div class="group row-layout">
-            <IgbInput @bind-Value="value" Label="Group name" Required="true" Outlined="true" class="user-input_1 input" inputs-scope></IgbInput>
-            <IgbButton Variant="ButtonVariant.Outlined" class="button user-input_1" inputs-scope>
+        <div class="row-layout group_7">
+            <IgbInput @bind-Value="value" Label="Group name" Required="true" Outlined="true" class="input_1" inputs-scope></IgbInput>
+            <IgbButton Variant="ButtonVariant.Outlined" class="button" inputs-scope>
                 <span class="material-icons">
                     check
                 </span>
@@ -188,17 +186,17 @@
         <IgbAvatar Shape="AvatarShape.Circle" class="avatar" inputs-scope>
             <span class="material-icons">people</span>
         </IgbAvatar>
-        <div class="group_8 group_9 row-layout">
-            <span class="material-icons icon_4 icon_5">
+        <div class="row-layout group_8">
+            <span class="material-icons icon_3">
                 person
             </span>
-            <span class="material-icons icon_2 icon_4">
+            <span class="material-icons icon_4">
                 person
             </span>
-            <span class="material-icons icon">
+            <span class="material-icons icon_5">
                 person
             </span>
-            <span class="material-icons icon_1">
+            <span class="material-icons icon_6">
                 person
             </span>
         </div>

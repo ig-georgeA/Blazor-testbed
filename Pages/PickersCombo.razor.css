@@ -1,58 +1,67 @@
+.column-layout {
+    display: flex;
+    flex-direction: column;
+}
 .pickers-combo-container {
     justify-content: center;
-    height: 100%;
     align-items: center;
+    align-content: flex-start;
+    height: 100%;
+}
+.row-layout {
+    display: flex;
 }
 .group {
-    flex-wrap: wrap;
-    align-items: center;
+    justify-content: flex-start;
+    align-items: stretch;
+    align-content: flex-start;
     position: relative;
     min-width: 50px;
+    min-height: 50px;
 }
 .group_1 {
-    position: relative;
+    justify-content: flex-start;
     align-items: stretch;
-    min-height: 50px;
-    min-width: 50px;
-}
-.group_2 {
+    align-content: flex-start;
     padding: 16px;
     width: 500px;
-    align-items: stretch;
-    min-height: 50px;
     min-width: 50px;
+    min-height: 50px;
 }
-.dropdown {
-    width: 188px;
-    flex-shrink: 0;
-    min-width: min-content;
-}
-.button {
-    flex-shrink: 0;
-    margin: 16px;
-    height: max-content;
-    min-width: min-content;
+.group_2 {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+    align-content: flex-start;
+    position: relative;
+    min-width: 50px;
 }
 .user-input {
     margin: 16px;
     height: max-content;
     min-width: min-content;
 }
+.button {
+    margin: 16px;
+    height: max-content;
+    min-width: min-content;
+    flex-shrink: 0;
+}
+.dropdown {
+    min-width: min-content;
+    flex-shrink: 0;
+}
+.dropdown::part(base) {
+    width: 188px;
+}
 .icon {
-    color: hsla(var(--igc-warn-500));
+    font-size: 24px;
     width: 24px;
     height: 24px;
-    font-size: 24px;
 }
 .icon_1 {
+    font-size: 24px;
     width: 24px;
     height: 24px;
-    font-size: 24px;
-}
-.row-layout {
-    display: flex;
-}
-.column-layout {
-    display: flex;
-    flex-direction: column;
+    color: hsla(var(--igc-warn-500));
 }
