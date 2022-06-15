@@ -1,0 +1,156 @@
+<div class="row-layout group">
+  <div class="column-layout group_1">
+    <igx-card type="outlined" class="card">
+      <igx-card-header>
+        <div igxCardThumbnail>
+          <igx-avatar src="/assets/Avatar9.png" size="medium" [roundShape]="true"></igx-avatar>
+        </div>
+        <h3 igxCardHeaderTitle>
+          FirstName LastName
+        </h3>
+        <h5 igxCardHeaderSubtitle>
+          myemail@email.com
+        </h5>
+      </igx-card-header>
+      <igx-card-actions [reverse]="true" class="actions-content">
+        <button igxButton="flat" igxRipple class="button">
+          <igx-icon>
+            exit_to_app
+          </igx-icon>
+          <span>Sign out</span>
+        </button>
+      </igx-card-actions>
+    </igx-card>
+    <igx-expansion-panel class="expansion-panel">
+      <igx-expansion-panel-header iconPosition="right">
+        <igx-expansion-panel-title>
+          Folders
+        </igx-expansion-panel-title>
+      </igx-expansion-panel-header>
+      <igx-expansion-panel-body>
+        <igx-list class="list">
+          <igx-list-item [isHeader]="false">
+            <span igxListThumbnail>
+              <igx-avatar icon="folder" [roundShape]="true" class="avatar"></igx-avatar>
+            </span>
+            <span igxListLineTitle>Title goes here</span>
+          </igx-list-item>
+          <igx-list-item [isHeader]="false">
+            <span igxListThumbnail>
+              <igx-avatar icon="folder" [roundShape]="true" class="avatar"></igx-avatar>
+            </span>
+            <span igxListLineTitle>Title goes here</span>
+          </igx-list-item>
+          <igx-list-item [isHeader]="false">
+            <span igxListThumbnail>
+              <igx-avatar icon="folder" [roundShape]="true" class="avatar"></igx-avatar>
+            </span>
+            <span igxListLineTitle>Title goes here</span>
+          </igx-list-item>
+        </igx-list>
+      </igx-expansion-panel-body>
+    </igx-expansion-panel>
+    <igx-expansion-panel [collapsed]="false" class="expansion-panel">
+      <igx-expansion-panel-header iconPosition="right">
+        <igx-expansion-panel-title>
+          Accounts
+        </igx-expansion-panel-title>
+      </igx-expansion-panel-header>
+      <igx-expansion-panel-body>
+        <igx-list class="list">
+          <igx-list-item [isHeader]="false">
+            <span igxListThumbnail>
+              <igx-avatar icon="person" [roundShape]="true" class="avatar"></igx-avatar>
+            </span>
+            <span igxListLineTitle>User profile</span>
+          </igx-list-item>
+          <igx-list-item [isHeader]="false">
+            <span igxListThumbnail>
+              <igx-avatar icon="assessment" [roundShape]="true" class="avatar"></igx-avatar>
+            </span>
+            <span igxListLineTitle>Analytics</span>
+          </igx-list-item>
+          <igx-list-item [isHeader]="false">
+            <span igxListThumbnail>
+              <igx-avatar icon="book" [roundShape]="true" class="avatar"></igx-avatar>
+            </span>
+            <span igxListLineTitle>Favorites</span>
+          </igx-list-item>
+          <igx-list-item [isHeader]="false">
+            <span igxListThumbnail>
+              <igx-avatar icon="people" [roundShape]="true" class="avatar"></igx-avatar>
+            </span>
+            <span igxListLineTitle>Shared with others</span>
+          </igx-list-item>
+        </igx-list>
+      </igx-expansion-panel-body>
+    </igx-expansion-panel>
+    <igx-expansion-panel [collapsed]="false" class="expansion-panel">
+      <igx-expansion-panel-header iconPosition="right">
+        <igx-expansion-panel-title>
+          Settings
+        </igx-expansion-panel-title>
+      </igx-expansion-panel-header>
+      <igx-expansion-panel-body>
+        <igx-list class="list">
+          <igx-list-item [isHeader]="false">
+            <span igxListThumbnail>
+              <igx-avatar icon="palette" [roundShape]="true" class="avatar"></igx-avatar>
+            </span>
+            <span igxListLineTitle>Theme</span>
+          </igx-list-item>
+          <igx-list-item [isHeader]="false">
+            <span igxListThumbnail>
+              <igx-avatar icon="vpn_key" [roundShape]="true" class="avatar"></igx-avatar>
+            </span>
+            <span igxListLineTitle>Change password</span>
+          </igx-list-item>
+          <igx-list-item [isHeader]="false">
+            <span igxListThumbnail>
+              <igx-avatar icon="call_split" [roundShape]="true" class="avatar"></igx-avatar>
+            </span>
+            <span igxListLineTitle>Mail rules</span>
+          </igx-list-item>
+          <igx-list-item [isHeader]="false">
+            <span igxListThumbnail>
+              <igx-avatar icon="forum" [roundShape]="true" class="avatar"></igx-avatar>
+            </span>
+            <span igxListLineTitle>Chat preferences</span>
+          </igx-list-item>
+        </igx-list>
+      </igx-expansion-panel-body>
+    </igx-expansion-panel>
+  </div>
+</div>
+<div class="row-layout row-layout-1">
+  <div class="column-layout column-layout-1">
+    <h5 class="title-1">
+      Sign in
+    </h5>
+    <igx-input-group type="box" class="user-input">
+      <input type="text" igxInput />
+      <label igxLabel>Username</label>
+    </igx-input-group>
+    <igx-input-group type="box" class="user-input_1">
+      <input type="password" igxInput />
+      <label igxLabel>Password</label>
+    </igx-input-group>
+    <div class="row-layout row-layout-2">
+      <igx-checkbox labelPosition="after" class="checkbox-1">
+        Remember me
+      </igx-checkbox>
+      <a target="_blank" class="igx-typography__body-1 hyperlink">
+        Forgot password?
+      </a>
+    </div>
+    <button igxButton="raised" igxRipple class="user-input">
+      Sign in
+    </button>
+    <button igxButton="outlined" igxRipple class="user-input_1">
+      Create a new account
+    </button>
+    <p class="igx-typography__caption text-2">
+      By signing in, you are agreeing to our terms of use and privacy policy
+    </p>
+  </div>
+</div>

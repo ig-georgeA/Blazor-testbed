@@ -1,0 +1,66 @@
+:host {
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  align-content: stretch;
+}
+.column-layout {
+  display: flex;
+  flex-direction: column;
+}
+.group {
+  background-color: hsla(var(--igx-surface-500));
+  border-color: hsla(var(--igx-grays-200));
+  border-width: 1px;
+  border-style: solid;
+  justify-content: flex-start;
+  align-items: stretch;
+  align-content: flex-start;
+  position: relative;
+  padding: 32px;
+  min-width: 500px;
+  min-height: 50px;
+  flex-grow: 1;
+  flex-basis: 0;
+}
+.group_1 {
+  background-color: hsla(var(--igx-surface-500));
+  border-color: hsla(var(--igx-grays-200));
+  border-width: 1px;
+  border-style: solid;
+  justify-content: flex-start;
+  align-items: stretch;
+  align-content: flex-start;
+  padding: 32px;
+  min-width: 500px;
+  min-height: 50px;
+  flex-grow: 1;
+  flex-basis: 0;
+}
+.category-chart {
+  --x-axis-label-text-style: normal 400 14px Titillium Web;
+  --y-axis-label-text-style: normal 400 14px Titillium Web;
+  --x-axis-title-text-style: normal 400 14px Titillium Web;
+  --y-axis-title-text-style: normal 400 14px Titillium Web;
+  --title-text-style: normal 600 20px Titillium Web;
+  min-width: 400px;
+  min-height: 300px;
+  flex-grow: 1;
+  flex-basis: 0;
+}
+.pie-chart {
+  --text-style: normal 400 14px Titillium Web;
+  min-width: 250px;
+  min-height: 250px;
+  flex-grow: 1;
+  flex-basis: 0;
+}
+.h6 {
+  text-align: center;
+  color: hsla(var(--igx-grays-700));
+  margin: 0 0 16px;
+  height: max-content;
+  min-width: min-content;
+}
