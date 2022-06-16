@@ -1,0 +1,64 @@
+@page "/expansion-panels"
+
+<div class="row-layout expansion-panels-container">
+    <div class="row-layout group">
+        <div class="column-layout group_1">
+            <IgbCard Outlined="true" class="card" expansion-panels-scope>
+                <IgbCardHeader>
+                    <div slot="thumbnail">
+                        <IgbAvatar Src="assets/Avatar9.png" Size="SizableComponentSize.Medium" Shape="AvatarShape.Circle"></IgbAvatar>
+                    </div>
+                    <h3 slot="title">
+                        FirstName LastName
+                    </h3>
+                    <h5 slot="subtitle">
+                        myemail@@email.com
+                    </h5>
+                </IgbCardHeader>
+                <IgbCardActions class="actions-content" expansion-panels-scope>
+                    <IgbButton Variant="ButtonVariant.Flat" class="button" expansion-panels-scope>
+                        <span class="material-icons">
+                            exit_to_app
+                        </span>
+                        <span>Sign out</span>
+                        <IgbRipple></IgbRipple>
+                    </IgbButton>
+                </IgbCardActions>
+            </IgbCard>
+            <span class="expansion-panel">ExpansionPanel not yet available in Blazor</span>
+            <span class="expansion-panel">ExpansionPanel not yet available in Blazor</span>
+            <span class="expansion-panel">ExpansionPanel not yet available in Blazor</span>
+        </div>
+    </div>
+    <div class="row-layout row-layout-1">
+        <div class="column-layout column-layout-1">
+            <h5 class="title-1">
+                Sign in
+            </h5>
+            <IgbInput Label="Username" Outlined="false" class="user-input" expansion-panels-scope></IgbInput>
+            <IgbInput DisplayType="InputType.Password" Label="Password" Outlined="false" class="user-input_1" expansion-panels-scope></IgbInput>
+            <div class="row-layout row-layout-2">
+                <IgbCheckbox LabelPosition="CheckboxBaseLabelPosition.After" class="checkbox-1" expansion-panels-scope>
+                    Remember me
+                </IgbCheckbox>
+                <a class="typography__body-1 hyperlink">
+                    Forgot password?
+                </a>
+            </div>
+            <IgbButton class="user-input" expansion-panels-scope>
+                Sign in
+                <IgbRipple></IgbRipple>
+            </IgbButton>
+            <IgbButton Variant="ButtonVariant.Outlined" class="user-input_1" expansion-panels-scope>
+                Create a new account
+                <IgbRipple></IgbRipple>
+            </IgbButton>
+            <p class="typography__caption text-2">
+                By signing in, you are agreeing to our terms of use and privacy policy
+            </p>
+        </div>
+    </div>
+</div>
+
+@code {
+}
