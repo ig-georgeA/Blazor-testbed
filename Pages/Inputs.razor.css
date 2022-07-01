@@ -14,7 +14,9 @@
     flex-direction: column;
 }
 .column-layout_1 {
-    background-color: hsla(var(--igc-surface-500));
+    background-color: transparent;
+    border-color: hsla(var(--igc-surface-500));
+    border-style: solid;
     justify-content: flex-start;
     align-items: stretch;
     align-content: stretch;
@@ -23,8 +25,10 @@
     width: 500px;
     min-width: 320px;
     min-height: 50px;
+    flex-shrink: 0;
 }
 .group {
+    flex-wrap: wrap;
     justify-content: flex-start;
     align-items: stretch;
     align-content: flex-start;
@@ -42,6 +46,7 @@
     width: 500px;
     min-width: 320px;
     min-height: 50px;
+    flex-shrink: 0;
 }
 .group_2 {
     flex-wrap: wrap;
@@ -51,8 +56,10 @@
     margin: 0 0 16px;
     min-width: 50px;
     min-height: 50px;
+    flex-shrink: 0;
 }
 .group_3 {
+    flex-wrap: wrap;
     justify-content: flex-start;
     align-items: flex-start;
     align-content: flex-start;
@@ -60,6 +67,7 @@
     margin: 0 0 16px;
     min-width: 50px;
     min-height: 50px;
+    flex-shrink: 0;
 }
 .group_4 {
     justify-content: flex-start;
@@ -117,12 +125,13 @@
     height: max-content;
     min-width: min-content;
 }
-.slider {
-    height: max-content;
-    min-width: 50px;
-}
-.slider_1 {
+.date-picker_1 {
     margin: 0 0 16px;
+    height: max-content;
+    min-width: 120px;
+}
+.slider {
+    margin: 0 0 32px;
     height: max-content;
     min-width: 50px;
 }
@@ -170,14 +179,19 @@
     max-height: max-content;
     flex-shrink: 0;
 }
+.textarea {
+    margin: 0 0 16px;
+    height: max-content;
+    min-width: min-content;
+}
 .range-slider {
     margin: 0 0 16px;
     height: max-content;
     min-width: 50px;
 }
-.textarea {
+.range-slider_1 {
     height: max-content;
-    min-width: min-content;
+    min-width: 50px;
 }
 .icon {
     font-size: 24px;
@@ -198,7 +212,7 @@
     max-height: max-content;
 }
 .chip {
-    margin: 0 16px 0 0;
+    margin: 0 16px 8px 0;
     width: max-content;
     height: max-content;
 }
@@ -208,6 +222,7 @@
     height: 18px;
 }
 .chip_1 {
+    margin: 0 0 8px;
     width: max-content;
     height: max-content;
 }
