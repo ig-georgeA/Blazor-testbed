@@ -3,28 +3,31 @@
 
 <div class="row-layout charts-container">
     <div class="column-layout group">
-        <IgbCategoryChart DataSource="financialBoxOfficeRevenue" ChartTitle="Column" ComputedPlotAreaMarginMode="ComputedPlotAreaMarginMode.Series" class="category-chart" charts-scope></IgbCategoryChart>
+        <IgbCategoryChart DataSource="financialBoxOfficeRevenue" ComputedPlotAreaMarginMode="ComputedPlotAreaMarginMode.Series" class="category-chart" charts-scope></IgbCategoryChart>
     </div>
     <div class="column-layout group">
         <IgbCategoryChart DataSource="financialBoxOfficeRevenue" ChartType="CategoryChartType.Area" ChartTitle="Area" ComputedPlotAreaMarginMode="ComputedPlotAreaMarginMode.Series" class="category-chart" charts-scope></IgbCategoryChart>
     </div>
     <div class="column-layout group">
-        <IgbCategoryChart DataSource="financialBoxOfficeRevenue" ChartType="CategoryChartType.Point" ChartTitle="Point" ComputedPlotAreaMarginMode="ComputedPlotAreaMarginMode.Series" class="category-chart" charts-scope></IgbCategoryChart>
+        <IgbCategoryChart DataSource="financialBoxOfficeRevenue" ChartType="CategoryChartType.Point" ComputedPlotAreaMarginMode="ComputedPlotAreaMarginMode.Series" class="category-chart" charts-scope></IgbCategoryChart>
     </div>
     <div class="column-layout group">
         <IgbCategoryChart DataSource="financialBoxOfficeRevenue" ChartType="CategoryChartType.Line" ChartTitle="Line" ComputedPlotAreaMarginMode="ComputedPlotAreaMarginMode.Series" class="category-chart" charts-scope></IgbCategoryChart>
     </div>
     <div class="column-layout group_1">
-        <IgbCategoryChart DataSource="financialBoxOfficeRevenue" ChartType="CategoryChartType.Spline" ChartTitle="Spline chart" ComputedPlotAreaMarginMode="ComputedPlotAreaMarginMode.Series" class="category-chart" charts-scope></IgbCategoryChart>
+        <IgbCategoryChart DataSource="financialBoxOfficeRevenue" ChartType="CategoryChartType.Spline" ComputedPlotAreaMarginMode="ComputedPlotAreaMarginMode.Series" class="category-chart" charts-scope></IgbCategoryChart>
     </div>
     <div class="column-layout group_1">
-        <IgbCategoryChart DataSource="financialBoxOfficeRevenue" ChartType="CategoryChartType.SplineArea" ChartTitle="Spline area" ComputedPlotAreaMarginMode="ComputedPlotAreaMarginMode.Series" class="category-chart" charts-scope></IgbCategoryChart>
+        <IgbCategoryChart DataSource="financialBoxOfficeRevenue" ChartType="CategoryChartType.SplineArea" ComputedPlotAreaMarginMode="ComputedPlotAreaMarginMode.Series" class="category-chart" charts-scope></IgbCategoryChart>
     </div>
     <div class="column-layout group_1">
-        <IgbCategoryChart DataSource="financialBoxOfficeRevenue" ChartType="CategoryChartType.StepArea" ChartTitle="Step area chart" ComputedPlotAreaMarginMode="ComputedPlotAreaMarginMode.Series" class="category-chart" charts-scope></IgbCategoryChart>
+        <IgbCategoryChart DataSource="financialBoxOfficeRevenue" ChartType="CategoryChartType.StepArea" ComputedPlotAreaMarginMode="ComputedPlotAreaMarginMode.Series" class="category-chart" charts-scope></IgbCategoryChart>
     </div>
     <div class="column-layout group_1">
-        <IgbCategoryChart DataSource="financialBoxOfficeRevenue" ChartType="CategoryChartType.StepLine" ChartTitle="Step line" ComputedPlotAreaMarginMode="ComputedPlotAreaMarginMode.Series" class="category-chart" charts-scope></IgbCategoryChart>
+        <IgbCategoryChart DataSource="financialBoxOfficeRevenue" ChartType="CategoryChartType.StepLine" ComputedPlotAreaMarginMode="ComputedPlotAreaMarginMode.Series" class="category-chart" charts-scope></IgbCategoryChart>
+    </div>
+    <div class="column-layout group_1">
+        <IgbCategoryChart DataSource="financialTrading" ChartType="CategoryChartType.Waterfall" ComputedPlotAreaMarginMode="ComputedPlotAreaMarginMode.Series" class="category-chart" charts-scope></IgbCategoryChart>
     </div>
     <div class="column-layout group_1">
         <h6 class="h6">
@@ -42,11 +45,13 @@
 
 @code {
     private Financial.BoxOfficeRevenueType[] financialBoxOfficeRevenue = Array.Empty<Financial.BoxOfficeRevenueType>();
+    private Financial.TradingType[] financialTrading = Array.Empty<Financial.TradingType>();
     private Financial.GlobalElectricityDemandType[] financialGlobalElectricityDemand = Array.Empty<Financial.GlobalElectricityDemandType>();
 
     protected override async Task OnInitializedAsync()
     {
         financialBoxOfficeRevenue = await this.financialService.GetBoxOfficeRevenue() ?? financialBoxOfficeRevenue;
+        financialTrading = await this.financialService.GetTrading() ?? financialTrading;
         financialGlobalElectricityDemand = await this.financialService.GetGlobalElectricityDemand() ?? financialGlobalElectricityDemand;
     }
 }

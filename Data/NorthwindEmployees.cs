@@ -1,5 +1,5 @@
-//namespace BlazorTest.Data.Northwind; // Razor won't recognize third level namespace
-namespace BlazorTest.Northwind;
+//namespace ComponentTestbed.Data.Northwind; // Razor won't recognize third level namespace
+namespace ComponentTestbed.Northwind;
 
 public class EmployeesType
 {

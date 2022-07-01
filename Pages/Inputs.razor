@@ -24,13 +24,10 @@
             <span slot="helper-text">sample hint text</span>
         </IgbInput>
         <IgbInput Label="Label/Placeholder" Outlined="false" class="input" inputs-scope></IgbInput>
-        <IgbDatePicker Value="date" Label="Date" class="date-picker" inputs-scope></IgbDatePicker>
         <IgbDatePicker Value="date" Label="Date-box style-input format 1" class="date-picker" inputs-scope></IgbDatePicker>
         <IgbDatePicker Value="date" Label="Date-box style - input format 2" class="date-picker" inputs-scope></IgbDatePicker>
-        <IgbDatePicker Value="date" Label="Date" class="date-picker" inputs-scope></IgbDatePicker>
-        <IgbDatePicker Value="date" Label="Date" class="date-picker" inputs-scope></IgbDatePicker>
-        <IgbSlider Value="50" Disabled="true" Min="0" Max="100" PrimaryTicks="3" SecondaryTicks="2" HideSecondaryLabels="false" class="slider" inputs-scope></IgbSlider>
-        <IgbSlider Value="50" Min="0" Max="100" class="slider_1" inputs-scope></IgbSlider>
+        <span class="textarea">Textarea not yet available in Blazor</span>
+        <IgbDatePicker Label="Date" class="date-picker_1" inputs-scope></IgbDatePicker>
         <div class="row-layout group">
             <IgbChip Size="SizableComponentSize.Large" class="chip" inputs-scope>
                 <span slot="prefix">
@@ -61,9 +58,24 @@
                 </span>
                 Country
             </IgbChip>
+            <IgbChip Disabled="true" Size="SizableComponentSize.Large" class="chip_1" inputs-scope>
+                <span slot="prefix">
+                    <span class="material-icons icon_2">
+                        account_balance
+                    </span>
+                </span>
+                <span slot="suffix">
+                    <span class="material-icons icon_2">
+                        clear
+                    </span>
+                </span>
+                Country
+            </IgbChip>
         </div>
+        <IgbSlider Value="50" Disabled="true" Min="0" Max="100" PrimaryTicks="3" SecondaryTicks="2" HideSecondaryLabels="false" class="slider" inputs-scope></IgbSlider>
+        <IgbSlider Value="50" Min="0" Max="100" PrimaryTicks="3" SecondaryTicks="2" TickOrientation="SliderBaseTickOrientation.Mirror" class="slider" inputs-scope></IgbSlider>
         <IgbRangeSlider Lower="20" Upper="80" Min="0" Max="100" Step="10" DiscreteTrack="true" class="range-slider" inputs-scope></IgbRangeSlider>
-        <span class="textarea">Textarea not yet available in Blazor</span>
+        <IgbRangeSlider Lower="20" Upper="80" Min="0" Max="100" PrimaryTicks="3" SecondaryTicks="1" HideSecondaryLabels="false" class="range-slider_1" inputs-scope></IgbRangeSlider>
     </div>
     <div class="column-layout group_1">
         <IgbInput Label="Label + prefix + suffix + border" Outlined="true" class="input" inputs-scope>
@@ -89,6 +101,9 @@
             </span>
             <span slot="helper-text">sample hint text</span>
         </IgbInput>
+        <IgbDatePicker Label="Date" class="date-picker_1" inputs-scope></IgbDatePicker>
+        <IgbDatePicker Value="date" Label="Date" class="date-picker" inputs-scope></IgbDatePicker>
+        <IgbDatePicker Value="date" Label="Date" class="date-picker" inputs-scope></IgbDatePicker>
         <div class="row-layout group_2">
             <IgbButton Variant="ButtonVariant.Outlined" class="button" inputs-scope>
                 <span class="material-icons">

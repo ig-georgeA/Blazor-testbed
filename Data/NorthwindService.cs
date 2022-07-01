@@ -1,6 +1,6 @@
 using System.Net.Http.Json;
 
-namespace BlazorTest.Northwind
+namespace ComponentTestbed.Northwind
 {
     public class NorthwindService
     {
@@ -14,11 +14,6 @@ namespace BlazorTest.Northwind
         public async Task<EmployeesType[]?> GetEmployees()
         {
             return await http.GetFromJsonAsync<EmployeesType[]?>("static-data/northwind-employees.json");
-        }
-
-        public async Task<CustomersType[]?> GetCustomers()
-        {
-            return await http.GetFromJsonAsync<CustomersType[]?>("static-data/northwind-customers.json");
         }
     }
 }

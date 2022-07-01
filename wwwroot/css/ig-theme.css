@@ -1,5 +1,36 @@
 :root {
-    --igc-font-family: 'Titillium Web', sans-serif;
+    --igc-font-family: "Roboto";
+    --igc-primary-h: 211deg;
+    --igc-primary-s: 100%;
+    --igc-primary-l: 50%;
+    --igc-secondary-h: 208deg;
+    --igc-secondary-s: 7%;
+    --igc-secondary-l: 46%;
+    --igc-surface-h: 210deg;
+    --igc-surface-s: 17%;
+    --igc-surface-l: 98%;
+    --igc-error-h: 354deg;
+    --igc-error-s: 70%;
+    --igc-error-l: 54%;
+    --igc-success-h: 134deg;
+    --igc-success-s: 61%;
+    --igc-success-l: 41%;
+    --igc-warn-h: 45deg;
+    --igc-warn-s: 100%;
+    --igc-warn-l: 51%;
+    --igc-info-h: 188deg;
+    --igc-info-s: 78%;
+    --igc-info-l: 41%;
+    --igc-primary-600-contrast: white;
+    --igc-primary-700-contrast: white;
+    --igc-primary-A400-contrast: white;
+    --igc-secondary-500-contrast: white;
+    --igc-error-600-contrast: white;
+    --igc-error-A400-contrast: white;
+    --igc-info-600-contrast: black;
+    --igc-info-700-contrast: black;
+    --igc-info-800-contrast: black;
+    --igc-info-A400-contrast: black;
 }
 
 /* Charts */

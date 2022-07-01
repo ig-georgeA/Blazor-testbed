@@ -1,9 +1,10 @@
 using Microsoft.AspNetCore.Components.Web;
 using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
 using IgniteUI.Blazor.Controls;
-using BlazorTest;
-using BlazorTest.Northwind;
-using BlazorTest.Financial;
+using ComponentTestbed;
+using ComponentTestbed.Northwind;
+using ComponentTestbed.Northwind_Jason;
+using ComponentTestbed.Financial;
 
 
 var builder = WebAssemblyHostBuilder.CreateDefault(args);
@@ -12,6 +13,7 @@ builder.RootComponents.Add<HeadOutlet>("head::after");
 
 builder.Services.AddScoped(sp => new HttpClient { BaseAddress = new Uri(builder.HostEnvironment.BaseAddress) });
 builder.Services.AddScoped<NorthwindService>();
+builder.Services.AddScoped<Northwind_JasonService>();
 builder.Services.AddScoped<FinancialService>();
 
 RegisterIgniteUI(builder.Services);
@@ -37,8 +39,8 @@ void RegisterIgniteUI(IServiceCollection services)
         typeof(IgbCategoryChartModule),
         typeof(IgbPieChartModule),
         typeof(IgbDatePickerModule),
-        typeof(IgbSliderModule),
         typeof(IgbChipModule),
+        typeof(IgbSliderModule),
         typeof(IgbRangeSliderModule),
         typeof(IgbSwitchModule),
         typeof(IgbRadioGroupModule),

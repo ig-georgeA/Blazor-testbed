@@ -1,6 +1,6 @@
 using System.Net.Http.Json;
 
-namespace BlazorTest.Financial
+namespace ComponentTestbed.Financial
 {
     public class FinancialService
     {
@@ -14,6 +14,11 @@ namespace BlazorTest.Financial
         public async Task<BoxOfficeRevenueType[]?> GetBoxOfficeRevenue()
         {
             return await http.GetFromJsonAsync<BoxOfficeRevenueType[]?>("static-data/financial-box-office-revenue.json");
+        }
+
+        public async Task<TradingType[]?> GetTrading()
+        {
+            return await http.GetFromJsonAsync<TradingType[]?>("static-data/financial-trading.json");
         }
 
         public async Task<GlobalElectricityDemandType[]?> GetGlobalElectricityDemand()

@@ -1,5 +1,5 @@
-//namespace BlazorTest.Data.Financial; // Razor won't recognize third level namespace
-namespace BlazorTest.Financial;
+//namespace ComponentTestbed.Data.Financial; // Razor won't recognize third level namespace
+namespace ComponentTestbed.Financial;
 
 public class GlobalElectricityDemandType
 {
