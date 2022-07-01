@@ -202,21 +202,12 @@
     max-width: max-content;
     max-height: max-content;
 }
-.icon_1 {
-    font-size: 18px;
-    width: 18px;
-    height: 18px;
-    min-width: max-content;
-    min-height: max-content;
-    max-width: max-content;
-    max-height: max-content;
-}
 .chip {
     margin: 0 16px 8px 0;
     width: max-content;
     height: max-content;
 }
-.icon_2 {
+.icon_1 {
     font-size: 18px;
     width: 18px;
     height: 18px;
@@ -233,25 +224,25 @@
 .avatar {
     margin: 16px;
 }
-.icon_3 {
+.icon_2 {
     font-size: 18px;
     width: 18px;
     height: 18px;
     margin: 8px;
 }
-.icon_4 {
+.icon_3 {
     font-size: 24px;
     width: 24px;
     height: 24px;
     margin: 8px;
 }
-.icon_5 {
+.icon_4 {
     font-size: 36px;
     width: 36px;
     height: 36px;
     margin: 8px;
 }
-.icon_6 {
+.icon_5 {
     font-size: 48px;
     width: 48px;
     height: 48px;
