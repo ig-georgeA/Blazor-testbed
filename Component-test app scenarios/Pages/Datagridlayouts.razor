@@ -1,0 +1,58 @@
+@page "/datagridlayouts"
+@inject Northwind.NorthwindService northwindService
+
+<div class="column-layout data-grid-layouts-container">
+    <IgbGrid Data="northwindEmployees" PrimaryKey="EmployeeID" DisplayDensity="DisplayDensity.Cosy" AllowFiltering="true" FilterMode="FilterMode.ExcelStyleFilter" AutoGenerate="false" class="ig-typography basic-grid" datagridlayouts-scope>
+        <IgbColumn Field="EmployeeID" DataType="GridColumnDataType.Number" Header="employeeID" Editable="true" Sortable="true" Resizable="true" Selectable="false"></IgbColumn>
+        <IgbColumn Field="LastName" DataType="GridColumnDataType.String" Header="lastName" Editable="true" Sortable="true" Resizable="true" Selectable="false"></IgbColumn>
+        <IgbColumn Field="FirstName" DataType="GridColumnDataType.String" Header="firstName" Editable="true" Sortable="true" Resizable="true" Selectable="false"></IgbColumn>
+        <IgbColumn Field="Title" DataType="GridColumnDataType.String" Header="title" Editable="true" Sortable="true" Resizable="true" Selectable="false"></IgbColumn>
+        <IgbColumn Field="BirthDate" DataType="GridColumnDataType.Date" Header="birthDate" Editable="true" Sortable="true" Resizable="true" Selectable="false"></IgbColumn>
+        <IgbColumn Field="HireDate" DataType="GridColumnDataType.Date" Header="hireDate" Editable="true" Sortable="true" Resizable="true" Selectable="false"></IgbColumn>
+        <IgbColumn Field="Address.Street" DataType="GridColumnDataType.String" Header="street" Editable="true" Sortable="true" Resizable="true" Selectable="false"></IgbColumn>
+        <IgbColumn Field="Address.City" DataType="GridColumnDataType.String" Header="city" Editable="true" Sortable="true" Resizable="true" Selectable="false"></IgbColumn>
+        <IgbColumn Field="Address.Region" DataType="GridColumnDataType.String" Header="region" Editable="true" Sortable="true" Resizable="true" Selectable="false"></IgbColumn>
+        <IgbColumn Field="Address.PostalCode" DataType="GridColumnDataType.String" Header="postalCode" Editable="true" Sortable="true" Resizable="true" Selectable="false"></IgbColumn>
+        <IgbColumn Field="TitleOfCourtesy" DataType="GridColumnDataType.String" Header="titleOfCourtesy" Editable="true" Sortable="true" Resizable="true" Selectable="false"></IgbColumn>
+        <IgbColumn Field="Address.Country" DataType="GridColumnDataType.String" Header="country" Editable="true" Sortable="true" Resizable="true" Selectable="false"></IgbColumn>
+        <IgbColumn Field="Address.Phone" DataType="GridColumnDataType.String" Header="phone" Editable="true" Sortable="true" Resizable="true" Selectable="false"></IgbColumn>
+        <IgbColumn Field="ManagerID" DataType="GridColumnDataType.Number" Header="managerID" Editable="true" Sortable="true" Resizable="true" Selectable="false"></IgbColumn>
+        <IgbColumn Field="Notes" DataType="GridColumnDataType.String" Header="notes" Editable="true" Sortable="true" Resizable="true" Selectable="false"></IgbColumn>
+        <IgbColumn Field="AvatarUrl" DataType="GridColumnDataType.String" Header="avatarUrl" Editable="true" Sortable="true" Resizable="true" Selectable="false"></IgbColumn>
+    </IgbGrid>
+    <IgbGrid Data="northwindCustomers" PrimaryKey="CustomerID" DisplayDensity="DisplayDensity.Cosy" RowSelection="GridSelectionMode.Multiple" RowEditable="true" Moving="true" AllowFiltering="true" AutoGenerate="false" class="ig-typography basic-grid" datagridlayouts-scope>
+        <IgbGridToolbar>
+            <IgbGridToolbarActions>
+                <IgbGridToolbarPinning></IgbGridToolbarPinning>
+                <IgbGridToolbarHiding></IgbGridToolbarHiding>
+                <IgbGridToolbarAdvancedFiltering></IgbGridToolbarAdvancedFiltering>
+            </IgbGridToolbarActions>
+            <IgbGridToolbarTitle>Grid Toolbar</IgbGridToolbarTitle>
+        </IgbGridToolbar>
+        <IgbColumn Field="CustomerID" DataType="GridColumnDataType.String" Header="customerID" Groupable="true" Sortable="true" Resizable="true" Selectable="false"></IgbColumn>
+        <IgbColumn Field="CompanyName" DataType="GridColumnDataType.String" Header="companyName" Groupable="true" Sortable="true" Resizable="true" Selectable="false"></IgbColumn>
+        <IgbColumn Field="ContactName" DataType="GridColumnDataType.String" Header="contactName" Groupable="true" Sortable="true" Resizable="true" Selectable="false"></IgbColumn>
+        <IgbColumn Field="ContactTitle" DataType="GridColumnDataType.String" Header="contactTitle" Groupable="true" Sortable="true" Resizable="true" Selectable="false"></IgbColumn>
+        <IgbColumn Field="Address.Street" DataType="GridColumnDataType.String" Header="street" Groupable="true" Sortable="true" Resizable="true" Selectable="false"></IgbColumn>
+        <IgbColumn Field="Address.City" DataType="GridColumnDataType.String" Header="city" Groupable="true" Sortable="true" Resizable="true" Selectable="false"></IgbColumn>
+        <IgbColumn Field="Address.Region" DataType="GridColumnDataType.String" Header="region" Groupable="true" Sortable="true" Resizable="true" Selectable="false"></IgbColumn>
+        <IgbColumn Field="Address.PostalCode" DataType="GridColumnDataType.String" Header="postalCode" Groupable="true" Sortable="true" Resizable="true" Selectable="false"></IgbColumn>
+        <IgbColumn Field="Address.Country" DataType="GridColumnDataType.String" Header="country" Groupable="true" Sortable="true" Resizable="true" Selectable="false"></IgbColumn>
+        <IgbColumn Field="Address.Phone" DataType="GridColumnDataType.String" Header="phone" Groupable="true" Sortable="true" Resizable="true" Selectable="false"></IgbColumn>
+        <IgbActionStrip>
+            <IgbGridPinningActions></IgbGridPinningActions>
+            <IgbGridEditingActions AddRow="true"></IgbGridEditingActions>
+        </IgbActionStrip>
+    </IgbGrid>
+</div>
+
+@code {
+    private Northwind.EmployeesType[] northwindEmployees = Array.Empty<Northwind.EmployeesType>();
+    private Northwind.CustomersType[] northwindCustomers = Array.Empty<Northwind.CustomersType>();
+
+    protected override async Task OnInitializedAsync()
+    {
+        northwindEmployees = await this.northwindService.GetEmployees() ?? northwindEmployees;
+        northwindCustomers = await this.northwindService.GetCustomers() ?? northwindCustomers;
+    }
+}

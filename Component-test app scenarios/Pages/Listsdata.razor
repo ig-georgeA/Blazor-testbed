@@ -1,0 +1,147 @@
+@page "/listsdata"
+@inject Northwind.NorthwindService northwindService
+
+<div class="column-layout lists-data-container">
+    <div class="row-layout group">
+        @foreach (var item in northwindEmployees)
+        {
+            <IgbCard Outlined="true" class="card" listsdata-scope>
+                <div class="group_1">
+                    <IgbCardHeader>
+                        <h3 slot="title">
+                            @item.LastName
+                        </h3>
+                        <h5 slot="subtitle">
+                            @item.Title
+                        </h5>
+                    </IgbCardHeader>
+                </div>
+                <IgbCardMedia class="media-content" listsdata-scope>
+                    <img src="@item.AvatarUrl" class="image" />
+                </IgbCardMedia>
+            </IgbCard>
+        }
+    </div>
+    <div class="row-layout group_2">
+        <IgbList class="list" listsdata-scope>
+            <IgbListItem>
+                <div slot="start">
+                    <IgbAvatar Shape="AvatarShape.Circle" class="avatar" listsdata-scope>
+                        <span class="material-icons">home</span>
+                    </IgbAvatar>
+                </div>
+                <div slot="title">Home</div>
+            </IgbListItem>
+            <IgbListItem>
+                <div slot="start">
+                    <IgbAvatar Shape="AvatarShape.Circle" class="avatar" listsdata-scope>
+                        <span class="material-icons">business</span>
+                    </IgbAvatar>
+                </div>
+                <div slot="title">Accounts</div>
+            </IgbListItem>
+            <IgbListItem>
+                <div slot="start">
+                    <IgbAvatar Shape="AvatarShape.Circle" class="avatar" listsdata-scope>
+                        <span class="material-icons">person_outline</span>
+                    </IgbAvatar>
+                </div>
+                <div slot="title">Contacts</div>
+            </IgbListItem>
+            <IgbListItem>
+                <div slot="start">
+                    <IgbAvatar Shape="AvatarShape.Circle" class="avatar" listsdata-scope>
+                        <span class="material-icons">inbox</span>
+                    </IgbAvatar>
+                </div>
+                <div slot="title">Contracts</div>
+            </IgbListItem>
+            <IgbListItem>
+                <div slot="start">
+                    <IgbAvatar Shape="AvatarShape.Circle" class="avatar" listsdata-scope>
+                        <span class="material-icons">bar_chart</span>
+                    </IgbAvatar>
+                </div>
+                <div slot="title">Reports</div>
+            </IgbListItem>
+            <IgbListItem>
+                <div slot="start">
+                    <IgbAvatar Shape="AvatarShape.Circle" class="avatar" listsdata-scope>
+                        <span class="material-icons">calendar_today</span>
+                    </IgbAvatar>
+                </div>
+                <div slot="title">Calendar</div>
+            </IgbListItem>
+            <IgbListItem>
+                <div slot="start">
+                    <IgbAvatar Shape="AvatarShape.Circle" class="avatar" listsdata-scope>
+                        <span class="material-icons">assignment_turned_in</span>
+                    </IgbAvatar>
+                </div>
+                <div slot="title">Tasks</div>
+            </IgbListItem>
+        </IgbList>
+        <div class="column-layout group_3">
+            <IgbList class="list_1" listsdata-scope>
+                @foreach (var item in northwindEmployees)
+                {
+                    <IgbListItem>
+                        <div slot="start">
+                            <IgbAvatar Src="@item.AvatarUrl" Size="SizableComponentSize.Medium" class="avatar" listsdata-scope></IgbAvatar>
+                        </div>
+                        <div slot="title">@item.LastName</div>
+                        <div slot="subtitle">@item.Title</div>
+                        <div slot="end">
+                            <span class="material-icons icon">
+                                star
+                            </span>
+                        </div>
+                    </IgbListItem>
+                }
+            </IgbList>
+        </div>
+        <div class="column-layout group_3">
+            <IgbList class="list_1" listsdata-scope>
+                @foreach (var item in northwindEmployees)
+                {
+                    <IgbListItem>
+                        <div slot="start">
+                            <IgbAvatar Src="@item.AvatarUrl" Size="SizableComponentSize.Large" Shape="AvatarShape.Circle" class="avatar" listsdata-scope></IgbAvatar>
+                        </div>
+                        <div slot="title">@item.LastName</div>
+                        <div slot="subtitle">@item.Title</div>
+                        <div>
+                            <div class="row-layout group_4">
+                                <div class="column-layout group_5">
+                                    <p class="typography__caption text">
+                                        Birthday
+                                    </p>
+                                    <p class="typography__caption text_1">
+                                        @item.BirthDate
+                                    </p>
+                                </div>
+                                <div class="column-layout group_5">
+                                    <p class="typography__caption text">
+                                        Country
+                                    </p>
+                                    <p class="typography__caption text_1">
+                                        @item.Address?.Country
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </IgbListItem>
+                }
+            </IgbList>
+        </div>
+    </div>
+</div>
+
+@code {
+    private Northwind.EmployeesType[] northwindEmployees = Array.Empty<Northwind.EmployeesType>();
+
+    protected override async Task OnInitializedAsync()
+    {
+        northwindEmployees = await this.northwindService.GetEmployees() ?? northwindEmployees;
+    }
+}

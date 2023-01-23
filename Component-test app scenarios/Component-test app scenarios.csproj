@@ -1,0 +1,33 @@
+<Project Sdk="Microsoft.NET.Sdk.BlazorWebAssembly">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="IgniteUI.Blazor" Version="22.2.50" />
+    <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly" Version="6.0.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.DevServer" Version="6.0.0" PrivateAssets="all" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="Shared/MainLayout.razor.css" CssScope="mainnavigation-scope" />
+    <None Update="Pages/Layouts.razor.css" CssScope="layouts-scope" />
+    <None Update="Pages/Position.razor.css" CssScope="position-scope" />
+    <None Update="Pages/Tablayout.razor.css" CssScope="tablayout-scope" />
+    <None Update="Pages/Expansionpanelstree.razor.css" CssScope="expansionpanelstree-scope" />
+    <None Update="Pages/CardCalendar.razor.css" CssScope="card-calendar-scope" />
+    <None Update="Pages/Listsdata.razor.css" CssScope="listsdata-scope" />
+    <None Update="Pages/Datagridlayouts.razor.css" CssScope="datagridlayouts-scope" />
+    <None Update="Pages/Treegrid.razor.css" CssScope="treegrid-scope" />
+    <None Update="Pages/Charts.razor.css" CssScope="charts-scope" />
+    <None Update="Pages/Typescale.razor.css" CssScope="typescale-scope" />
+    <None Update="Pages/Inputs.razor.css" CssScope="inputs-scope" />
+    <None Update="Pages/PickersCombo.razor.css" CssScope="pickers-combo-scope" />
+    <None Update="Pages/Dialogsandoverlays.razor.css" CssScope="dialogsandoverlays-scope" />
+    <None Update="Pages/Image.razor.css" CssScope="image-scope" />
+  </ItemGroup>
+
+</Project>
