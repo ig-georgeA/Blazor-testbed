@@ -1,0 +1,45 @@
+@page "/pickers-combo"
+
+<div class="row-layout pickers-combo-container">
+    <div class="row-layout group">
+        <div class="column-layout group_1">
+            <span class="user-input">Select not yet available in Blazor</span>
+            <span class="user-input">Select not yet available in Blazor</span>
+            <span class="user-input">Select not yet available in Blazor</span>
+            <span class="user-input">Select not yet available in Blazor</span>
+            <span class="user-input">Select not yet available in Blazor</span>
+        </div>
+        <div class="column-layout group_1">
+            <span class="user-input">Combo not yet available in Blazor</span>
+            <span class="user-input">Combo not yet available in Blazor</span>
+            <span class="user-input">Combo not yet available in Blazor</span>
+            <span class="user-input">Combo not yet available in Blazor</span>
+            <IgbButton @onclick="@(e => _dropdown!.ToggleAsync(_button))" @ref="_button" class="user-input" pickers-combo-scope>
+                <span>Dropdown</span>
+                <span class="material-icons">
+                    keyboard_arrow_down
+                </span>
+                <IgbRipple></IgbRipple>
+            </IgbButton>
+            <IgbDropdown @ref="_dropdown" class="dropdown" pickers-combo-scope>
+                <IgbDropdownItem>
+                    Option
+                </IgbDropdownItem>
+                <IgbDropdownItem>
+                    Option
+                </IgbDropdownItem>
+                <IgbDropdownItem>
+                    Option
+                </IgbDropdownItem>
+                <IgbDropdownItem>
+                    Option
+                </IgbDropdownItem>
+            </IgbDropdown>
+        </div>
+    </div>
+</div>
+
+@code {
+    private IgbButton? _button;
+    private IgbDropdown? _dropdown;
+}
