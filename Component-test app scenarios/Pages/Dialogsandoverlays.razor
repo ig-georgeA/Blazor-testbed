@@ -1,0 +1,65 @@
+@page "/dialogsandoverlays"
+
+<div class="column-layout dialogs-and-overlays-container">
+    <div class="row-layout group">
+        <div class="row-layout group_1">
+            <IgbButton class="button" dialogsandoverlays-scope>
+                <span class="material-icons">
+                    open_in_new
+                </span>
+                <span>Open custom dialog</span>
+                <IgbRipple></IgbRipple>
+            </IgbButton>
+            <span class="custom-dialog">Dialog not yet available in Blazor</span>
+        </div>
+        <div class="row-layout group_1">
+            <IgbButton class="button" dialogsandoverlays-scope>
+                <span class="material-icons">
+                    open_in_new
+                </span>
+                <span>Open alert dialog</span>
+                <IgbRipple></IgbRipple>
+            </IgbButton>
+            <span class="custom-dialog">Dialog not yet available in Blazor</span>
+            <span class="custom-dialog">Dialog not yet available in Blazor</span>
+        </div>
+        <div class="row-layout group_1">
+            <IgbButton class="button" dialogsandoverlays-scope>
+                <span class="material-icons">
+                    open_in_new
+                </span>
+                <span>Open confirmation dialog</span>
+                <IgbRipple></IgbRipple>
+            </IgbButton>
+            <span class="custom-dialog">Dialog not yet available in Blazor</span>
+        </div>
+    </div>
+    <div class="row-layout group">
+        <div class="row-layout group_2">
+            <IgbButton @onclick="@(e => _snackbar!.ToggleAsync())" class="button" dialogsandoverlays-scope>
+                <span class="material-icons">
+                    open_in_new
+                </span>
+                <span>Open snackbar</span>
+                <IgbRipple></IgbRipple>
+            </IgbButton>
+        </div>
+        <div class="row-layout group_2">
+            <IgbButton class="button" dialogsandoverlays-scope>
+                <span class="material-icons">
+                    open_in_new
+                </span>
+                <span>Open banner</span>
+                <IgbRipple></IgbRipple>
+            </IgbButton>
+        </div>
+    </div>
+    <span class="banner">Banner not yet available in Blazor</span>
+    <IgbSnackbar ActionText="Dismiss" Action="@(e => _snackbar!.ToggleAsync())" @ref="_snackbar" class="snackbar" dialogsandoverlays-scope>
+        This is a message
+    </IgbSnackbar>
+</div>
+
+@code {
+    private IgbSnackbar? _snackbar;
+}

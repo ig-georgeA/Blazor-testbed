@@ -1,0 +1,56 @@
+.row-layout {
+    display: flex;
+}
+.pickers-combo-container {
+    justify-content: center;
+    align-items: center;
+    align-content: flex-start;
+    height: 100%;
+}
+.group {
+    justify-content: flex-start;
+    align-items: stretch;
+    align-content: flex-start;
+    position: relative;
+    min-width: 50px;
+    min-height: 50px;
+}
+.column-layout {
+    display: flex;
+    flex-direction: column;
+}
+.group_1 {
+    justify-content: flex-start;
+    align-items: stretch;
+    align-content: flex-start;
+    padding: 16px;
+    width: 500px;
+    min-width: 50px;
+    min-height: 50px;
+}
+.user-input {
+    margin: 16px;
+    height: max-content;
+    min-width: min-content;
+}
+.dropdown {
+    left: 33px;
+    top: 0;
+    position: absolute;
+    min-width: min-content;
+}
+.dropdown::part(base) {
+    width: 432px;
+    height: max-content;
+}
+.icon {
+    font-size: 24px;
+    width: 24px;
+    height: 24px;
+}
+.icon_1 {
+    font-size: 24px;
+    width: 24px;
+    height: 24px;
+    color: hsla(var(--ig-warn-500));
+}
